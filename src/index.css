@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+ font-family: "DM Sans", sans-serif;
 }
 
 
@@ -9,9 +10,9 @@
   font-family: "Quicksand", sans-serif;
 }
 
-.dm-sans {
+/* .dm-sans {
   font-family: "DM Sans", sans-serif;
-}
+} */
 
 @keyframes scroll {
   0% {

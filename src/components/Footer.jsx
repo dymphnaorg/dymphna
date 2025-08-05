@@ -18,12 +18,12 @@ function Footer() {
 
     <div className='flex sm:p-10 p-5 w-full dm-sans'  >
       <div className='footer-elemnent' >
-        <div className='flex w-full h-full sm:pt-10 pt-5 sm:pl-10 pl-5 sm:pb-10 pb-5' >
+        
+        <div className='hidden md:flex w-full h-full sm:pt-10 pt-5 sm:pl-10 pl-5 sm:pb-10 pb-5' >
           <div className='w-[20%] flex' >
             <div>
               <img src={footerImg} alt="" className='items-start w-[70px] sm:w-[70px] md:w-[100px] lg:w-[130px] ' />
             </div>
-
           </div>
           <div className='w-[80%] flex' >
             <div className='w-[50%] flex items-center justify-center '>
@@ -84,8 +84,6 @@ function Footer() {
                   <FaXTwitter />
                 </div>
               </div>
-
-
             </div>
 
           </div>
@@ -93,7 +91,75 @@ function Footer() {
         </div>
         <div className='footer-cutting flex items-center justify-center text-[50px] stroke-[1]' >
           <GoArrowUp/>
+        </div> 
+
+
+        {/* Small screen Footer */}
+
+        <div className='block md:hidden p-10' >
+          <div className="flex justify-between items-center ">
+            <img src={footerImg} alt="Logo" className="w-[90px]" />
+            <button className="border-2 border-black bg-[#80BD48] text-black rounded-lg font-medium flex items-center justify-center px-4 py-2 hover:bg-white duration-300 text-sm">
+              Book now <span className="pl-1"><LuArrowUpRight /></span>
+            </button>
+          </div>
+
+          {/* Links Section */}
+          <div className="flex gap-10 text-white text-sm pt-6">
+            {/* Services */}
+            <div>
+              <h1 className="text-[#696969] font-semibold text-[14px] mb-2">SERVICE</h1>
+              <ul className="flex flex-col gap-1">
+                <li>Psychotherapy and Counseling</li>
+                <li>Psychodiagnostics</li>
+                <li>Remedial training</li>
+                <li>Career Guidance</li>
+              </ul>
+
+              <h1 className="text-[#696969] font-semibold text-[14px] mt-4 mb-2">OTHER SERVICE</h1>
+              <ul className="flex flex-col gap-1">
+                <li>Sports psychology</li>
+                <li>Internships</li>
+              </ul>
+            </div>
+
+            {/* Company */}
+            <div>
+              <h1 className="text-[#696969] font-semibold text-[14px] mb-2">COMPANY</h1>
+              <ul className="flex flex-col gap-1">
+                <li>About Us</li>
+                <li>Careers</li>
+                <li>Contact Us</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Quote */}
+          <div className="text-white font-semibold text-[20px] mt-8 leading-tight">
+            Because Every Mind Matters.
+          </div>
+
+          {/* Social Icons */}
+          <div className="flex gap-3 mt-6">
+            <div className="w-10 h-10 border border-[#6D6D6D] text-black flex items-center justify-center rounded-lg">
+              <FaInstagram />
+            </div>
+            <div className="w-10 h-10 border border-[#6D6D6D] text-black flex items-center justify-center rounded-lg">
+              <FiFacebook />
+            </div>
+            <div className="w-10 h-10 border border-[#6D6D6D] text-black flex items-center justify-center rounded-lg">
+              <FaXTwitter />
+            </div>
+          </div>
+
+          {/* Up Arrow */}
+          <div className='footer-cutting flex items-center justify-center text-[50px] stroke-[1]' >
+            <GoArrowUp />
+          </div>
+
         </div>
+
+
       </div>
 
     </div>

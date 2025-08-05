@@ -23,7 +23,7 @@ function Navbar() {
     return (
 
         <>
-            <nav className="bg-white h-[91px] flex items-center justify-center shadow dm-sans">
+            <nav className="bg-white h-[91px] flex items-center justify-center shadow ">
                 <div className="w-full flex items-center justify-between">
                     <div className='flex items-center gap-15 sm:pl-20 pl-6 dm-sans font-semibold w-[80%]' >
                         {/* Logo */}
