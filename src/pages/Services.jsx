@@ -11,15 +11,16 @@ import serviceImg4Whiten from '../assets/Property=Component15.png'
 
 
 
+
 function Services() {
     return (
-        <div className=' px-5 sm:px-10 dm-sans pb-20' >
-            <div className='max-w-[1200px] pt-10'>
-                <h1 className='text-[12px] md:text-[17px] lg:text-[20px]' >tAt Dymphna, we offer a wide range of mental health services designed to support your emotional, cognitive, academic, and personal growth. Whether you're navigating stress, learning challenges, or planning your future, our experienced professionals are here to guide you.</h1>
+        <div className=' px-5 sm:px-10 w-full dm-sans pt-10 pb-20' >
+            <div className='max-w-[1200px] py-10 sm:py-5'>
+                <h1 className='text-[12px] md:text-[17px] lg:text-[20px]' style={{ fontWeight: "500" }} >tAt Dymphna, we offer a wide range of mental health services designed to support your emotional, cognitive, academic, and personal growth. Whether you're navigating stress, learning challenges, or planning your future, our experienced professionals are here to guide you.</h1>
             </div>
 
-            <div className='flex flex-col gap-7' >
-                <div className='flex flex-col lg:flex-row gap-8 h-auto w-full pt-8 items-center md:items-center lg:items-start '>
+            <div className='flex flex-col gap-7 pt-4 lg:pt-10' >
+                <div className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto w-full items-center md:items-center lg:items-start '>
 
                     {/* LEFT TEXT SECTION */}
                     <div className='w-full lg:w-[40%] flex flex-col justify-between gap-3'>
@@ -99,7 +100,7 @@ function Services() {
 
                 <hr className="w-full border-t border-[#5B5B5B]" />
 
-                <div className='flex flex-col lg:flex-row gap-8 h-auto w-full pt-8'>
+                <div className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto w-full py-5  items-center md:items-center lg:items-start'>
                     {/* LEFT TEXT SECTION */}
                     <div className='w-full lg:w-[40%] flex flex-col justify-between gap-3'>
                         <h1 className='text-[18px] md:text-[18px] lg:text-[28px]' style={{ fontWeight: "500" }}>
@@ -158,7 +159,7 @@ function Services() {
                 </div>
                 <hr className="w-full border-t border-[#5B5B5B]" />
 
-                <div className='flex flex-col lg:flex-row gap-8 h-auto w-full pt-8'>
+                <div className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto py-5 w-full items-center md:items-center lg:items-start'>
                     {/* LEFT TEXT SECTION */}
                     <div className='w-full lg:w-[40%] flex flex-col justify-between gap-3'>
                         <h1 className='text-[18px] md:text-[18px] lg:text-[28px]' style={{ fontWeight: "500" }}>
@@ -229,7 +230,7 @@ function Services() {
                 </div>
                 <hr className="w-full border-t border-[#5B5B5B]" />
 
-                <div className='flex flex-col lg:flex-row gap-8 h-auto w-full pt-8'>
+                <div className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto py-5 w-full items-center md:items-center lg:items-start'>
                     {/* LEFT TEXT SECTION */}
                     <div className='w-full lg:w-[40%] flex flex-col justify-between gap-3'>
                         <h1 className='text-[18px] md:text-[18px] lg:text-[28px]' style={{ fontWeight: "500" }}>
@@ -298,6 +299,48 @@ function Services() {
                         </div>
                     </div>
                 </div>
+                <div className='flex flex-col gap-6 lg:pt-10'>
+                    <h1 className='text-lg lg:text-2xl font-medium' style={{ fontWeight: "500" }}>Other Services</h1>
+                    <hr className="w-full border-t border-[#5B5B5B]" />
+
+                    <div className='flex flex-col gap-8'>
+                        <div className='rounded-full w-full max-w-[230px] border'>
+                            <div className='flex gap-2 p-2 items-center'>
+                                <FaCircle className="text-[#80BD48] w-[11px] md:w-[19px] h-[11px] md:h-[19px]" />
+                                <h1 className='text-sm md:text-lg lg:text-xl font-medium'>Sports psychology</h1>
+                            </div>
+                        </div>
+
+                        <div className='rounded-full w-full max-w-[160px] border'>
+                            <div className='flex gap-2 p-2 items-center'>
+                                <FaCircle className="text-[#80BD48] w-[11px] md:w-[19px] h-[11px] md:h-[19px]" />
+                                <h1 className='text-sm md:text-lg lg:text-xl font-medium'>Internships</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr className="w-full border-t border-[#5B5B5B]" />
+
+                    <div className='flex flex-col lg:flex-row gap-5 lg:gap-20'>
+                        <div className='max-w-[900px]'>
+                            <p className='text-xs md:text-sm lg:text-base text-[#5B5B5B]'>
+                                Students can have a unique and enriching experience by interning at a property that houses schools and an elderly home with 300 beds. An internship programme offers the chance to work closely with interns at a 300-bed old age home and school. This gives interns the chance to pick the brains of industry professionals and acquire important knowledge and insights that will help them succeed in their future employment.
+                            </p>
+                        </div>
+                        <div className='flex flex-col gap-5 min-w-[300px]'>
+                            <div className='flex gap-2 items-center'>
+                                <FaCircle className="text-[#6D6D6D] w-[11px] md:w-[15px] h-[11px] md:h-[15px]" />
+                                <h1 className='text-sm md:text-lg lg:text-xl font-medium'>Sports psychology</h1>
+                            </div>
+                            <div className='flex flex-col gap-4 pl-5'>
+                                <h1 className='text-sm md:text-lg lg:text-xl font-medium'>*Research</h1>
+                                <h1 className='text-sm md:text-lg lg:text-xl font-medium'>*Seminars and Workshops</h1>
+                                <h1 className='text-sm md:text-lg lg:text-xl font-medium'>*Camps</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
 
 
