@@ -22,7 +22,7 @@ function HomeServiceSection() {
 
                     </div>
 
-                    <div className="w-full  flex flex-col gap-7 pt-20 sm:pt-20 md:pt-25 lg:pt:30 px-6">
+                    <div className="w-full  flex flex-col gap-7 pt-20 sm:pt-20 md:pt-25 lg:pt:30 px-6 text-white">
                         <div className='flex justify-end w-full pb-8 px-6' >
                             <h1 className='max-w-[986px] text-[23px]' style={{ fontWeight: "500" }} >Receive personalized support, expert guidance, and practical tools to manage stress,
                                 improve well-being, and grow emotionally. From therapy to career support and mental

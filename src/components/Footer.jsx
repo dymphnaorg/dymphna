@@ -16,7 +16,7 @@ import '../styles/element.css'
 function Footer() {
   return (
 
-    <div className='flex sm:px-10 px-5 w-full dm-sans'  >
+    <div className='flex sm:p-10 p-5 w-full dm-sans'  >
       <div className='footer-elemnent' >
         <div className='flex w-full h-full sm:pt-10 pt-5 sm:pl-10 pl-5 sm:pb-10 pb-5' >
           <div className='w-[20%] flex' >
