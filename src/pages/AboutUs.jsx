@@ -8,8 +8,16 @@ import aboutImg3 from '../assets/Component18.png'
 
 function AboutUs() {
     return (
-        <div className='w-full px-5 sm:px-10 py-20 dm-sans' >
-            <div>
+        <div className='w-full px-5 sm:px-10 dm-sans' >
+            <div className='w-full h-[200px] md:h-[260px] bg-[#343434] border-[#4C4C4C] border-[12px] rounded-3xl ' >
+                <div className='flex items-center gap-3 md:gap-4 pt-[115px] md:pt-[140px] pl-8' >
+                    <FaCircle className="text-[#80BD48] md-w-6 md-h-6 w-4 h-4  " />
+                    <h1 style={{ fontWeight: "700" }} className="text-[20px] md:text-[30px] text-white ">
+                        About Us
+                    </h1>
+                </div>
+            </div>
+            <div className='sm:pt-10 pt-5' >
                 <div className='flex w-[full] justify-center gap-6' >
                     <div className='w-[25%] float-left' >
                         <img src={aboutImg} alt="" />
@@ -186,7 +194,7 @@ function AboutUs() {
 
                         {/* SECOND TEXT - RIGHT ALIGN */}
                         <div className="flex  justify-end">
-                            <div  className='flex flex-col'>
+                            <div className='flex flex-col'>
                                 <h1 className='text-[14px] md:text-[16px] lg:text-[24px] ' style={{ fontWeight: "600" }}>Empowering Rural Communities, One Mind at a Time</h1>
                                 <p className="max-w-[700px] text-left text-[#696969] text-[12px] md:text-[16px] lg:text-[16px] pt-3">
                                     Dymphna's story is one of hope, resilience, and the unwavering commitment to bridging the mental health gap in rural areas. As we forge ahead, our mission remains clear: to empower rural communities, promote mental wellness, and inspire a brighter future for all.

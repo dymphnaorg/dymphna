@@ -65,7 +65,8 @@ function Footer() {
             </div>
 
             <div className='w-[50%] flex flex-col justify-between items-end text-right gap-4'>
-              <button className="w-full max-w-[160px] h-[36px] sm:h-[45px] border-2 border-black bg-[#80BD48] text-black rounded-lg font-medium flex justify-center items-center px-1 hover:bg-white duration-300">
+              <button className="w-full max-w-[160px] h-[36px] sm:h-[45px] border-2 border-black bg-[#80BD48] text-black rounded-lg text-[13px] lg:text-base lg:font-medium
+ flex justify-center items-center px-1 hover:bg-white duration-300">
                 Book Now <span className='pl-1'><LuArrowUpRight /></span>
               </button>
 

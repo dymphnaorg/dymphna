@@ -14,11 +14,11 @@ function HomeAdministration() {
  
 
     return (
-        <div className='my-20 dm-sans'>
+        <div className='my-20 dm-sans px-5 sm:px-10'>
 
             <div className="w-full px-4">
                 <div className='flex justify-center' >
-                    <h1 style={{ fontWeight: "700" }} className='text-[32px] ' >Administration</h1>
+                    <h1 style={{ fontWeight: "700" }} className=' text-[12px] sm:text-[32px] ' >Administration</h1>
                 </div>
                 <div className='flex justify-between items-center max-w-[1000px] mx-auto pt-10 gap-4'>
                     <div className="relative w-full ">
@@ -57,8 +57,8 @@ function HomeAdministration() {
                 </div>
             </div>
             <div className='pt-20' >
-                <div className='flex justify-start px-10'>
-                    <h1 style={{ fontWeight: "700" }} className='text-[24px] ' >Consultant Experts</h1>
+                <div className='flex justify-start'>
+                    <h1 style={{ fontWeight: "700" }} className='text-[12px] sm:text-[24px]' >Consultant Experts</h1>
                 </div>
 
                 <div className="overflow-hidden w-full pt-10">

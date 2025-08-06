@@ -9,28 +9,61 @@ import HomeBenefitSection from '../HomeComponents/HomeBenefitSection';
 
 function Home() {
   return (
-    <div>
-      <div className="relative flex flex-col md:flex-row items-center justify-between pl-10 pr-1">
+    <div className='' >
+
+      <div className="flex flex-col items-center justify-start px-10 pt-30 md:hidden">
+        {/* Heading */}
+        <h1 className="text-[28px] sm:text-[32px] quicksand font-bold leading-tight text-left">
+          Because Every Mind Matters <br /> Bringing Mental Health to Every Corner.
+        </h1>
+
+        {/* Image */}
+        <div className="w-full mt-6 flex justify-center">
+          <img className="w-full max-w-[90%]" src={homeIntroImg} alt="Intro" />
+        </div>
+
+        {/* Buttons */}
+        <div className="flex flex-col items-center gap-5 pt-8">
+          <button className="w-full max-w-[250px] h-[40px] sm:h-[45px] border-2 border-black bg-[#80BD48] text-black rounded-lg font-medium flex justify-center items-center px-3 hover:bg-white duration-300">
+            Explore our services <span className="pl-1"><LuArrowUpRight /></span>
+          </button>
+          <button className="w-full max-w-[250px] h-[40px] sm:h-[45px] text-black rounded-lg font-medium flex justify-center items-center px-3">
+            Try Stress Calculator <span className="pl-1"><LuArrowUpRight /></span>
+          </button>
+        </div>
+        <div className='flex w-full text-left  pt-8 text-[12px] text-[#4C4C4C]' >
+          <p>At Dymphna, we’re transforming rural mental health care through compassion, innovation, and accessibility. From stress management to psychotherapy, we’re here to support your journey toward emotional well-being—wherever you are.</p>
+        </div>
+
+      </div>
+
+
+      <div className="hidden md:flex md:pt-10 lg:pt-0 flex-col md:flex-row items-center justify-between px-10">
         {/* left text section */}
-        <div className="flex flex-col md:w-1/2 justify-between min-h-[80vh]">
+        <div className="flex flex-col md:w-[45%] justify-between min-h-[80vh]">
           <div></div>
-          <h1 className="text-[50px] quicksand font-bold ">Because Every Mind Matters  Bringing Mental Health to Every Corner.</h1>
+          <h1 className="text-[50px] quicksand font-bold md:text-[40px] ">Because Every Mind Matters  Bringing Mental Health to Every Corner.</h1>
           <div className='flex items-center gap-3' >
-            <button className="w-full max-w-[200px]  h-[36px] sm:h-[45px] border-2 border-black bg-[#80BD48] text-black rounded-lg font-medium flex justify-center items-center px-1 hover:bg-white duration-300">
+            <button className="w-full max-w-[200px]  h-[36px] sm:h-[45px] border-2 border-black bg-[#80BD48]  text-black rounded-lg text-[13px] lg:text-base lg:font-medium
+
+ flex justify-center items-center px-1 hover:bg-white duration-300">
               Explore our services <span className='pl-1' ><LuArrowUpRight /></span>
             </button>
-            <button className="w-full max-w-[200px]  h-[36px] sm:h-[45px] text-black rounded-lg font-medium flex justify-center items-center">
+            <button className="w-full max-w-[200px]  h-[36px] sm:h-[45px] text-black rounded-lg text-[13px] lg:text-base lg:font-medium
+
+ flex justify-center items-center">
               Try Stress Calculator <span className='pl-1' ><LuArrowUpRight /></span>
             </button>
           </div>
         </div>
         {/* right image section */}
-        <div className="md:w-1/2 relative -mt-15 flex justify-center">
-          <img className="w-[92%]" src={homeIntroImg} alt="Intro" />
+        <div className="md:w-[50%] flex justify-center">
+          <img className="w-[100%]" src={homeIntroImg} alt="Intro" />
         </div>
       </div>
 
-      <div className='flex pt-35 px-10 pb-20 gap-4' >
+
+      <div className='hidden md:flex  pt-35 px-10 pb-20 gap-4' >
         <div className='w-[50%]' >
           <img src={homeImg2} alt="" />
         </div>
@@ -54,7 +87,8 @@ function Home() {
                 Started as an online support initiative during the COVID-19 pandemic, it has now grown into a full-fledged mental health services organization.
               </p>
               <div className='pt-5' >
-                <button className="w-full max-w-[200px]  h-[36px] sm:h-[45px] border-2 border-black bg-[#80BD48] text-black rounded-lg font-medium flex justify-center items-center px-1 hover:bg-white duration-300">
+                <button className="w-full max-w-[200px]  h-[36px] sm:h-[45px] border-2 border-black bg-[#80BD48] text-black rounded-lg text-[13px] lg:text-base lg:font-medium
+flex justify-center items-center px-1 hover:bg-white duration-300">
                   View More details <span className='pl-1' ><LuArrowUpRight /></span>
                 </button>
               </div>

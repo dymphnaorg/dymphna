@@ -84,7 +84,7 @@ function HomeGeroPsycology() {
                     <div className='the first text section w-[60%]' >
                         <div className='flex items-center gap-1 mb-1' >
                             <FaCircle className="text-[#80BD48] w-2 h-2" />
-                            <h1 className="text-[10px]  font-bold ">
+                            <h1 className="text-[12px]  font-bold ">
                                 Gero Psychology – 30-Hour Online Course
                             </h1>
                         </div>
