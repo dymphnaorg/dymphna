@@ -16,6 +16,10 @@ function Home() {
         navigate('/services');
     };
 
+    const aboutNavigation = ()=>{
+      navigate('/aboutUs');
+    }
+
   return (
     <div className='' >
 
@@ -95,7 +99,7 @@ function Home() {
                 Started as an online support initiative during the COVID-19 pandemic, it has now grown into a full-fledged mental health services organization.
               </p>
               <div className='pt-5' >
-                <button className="w-full max-w-[200px]  h-[36px] sm:h-[45px] border-2 border-black bg-[#80BD48] text-black rounded-lg text-[13px] lg:text-base lg:font-medium
+                <button onClick={aboutNavigation} className="w-full max-w-[200px]  h-[36px] sm:h-[45px] border-2 border-black bg-[#80BD48] text-black rounded-lg text-[13px] lg:text-base lg:font-medium
 flex justify-center items-center px-1 hover:bg-white duration-300">
                   View More details <span className='pl-1' ><LuArrowUpRight /></span>
                 </button>

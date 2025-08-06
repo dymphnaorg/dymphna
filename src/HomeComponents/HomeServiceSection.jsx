@@ -113,7 +113,7 @@ function HomeServiceSection() {
                         </div>
 
                         <div className='flex justify-end w-full' >
-                            <button onClick={serviceNavigation} className="w-full max-w-[130px]  sm:max-w-[200px] h-[36px] sm:h-[45px] border-2 border-white text-white rounded-lg flex justify-between items-center px-3 text-[12px] sm:text-base  lg:text-base lg:font-medium  ">
+                            <button onClick={serviceNavigation} className="w-full max-w-[130px]  sm:max-w-[200px] h-[36px] sm:h-[45px] border-2 border-white text-white rounded-lg flex justify-between items-center px-3 text-[12px] sm:text-base  lg:text-base lg:font-medium hover:bg-white hover:text-black duration-300">
                                 Discover More <span className='pl-1' ><LuArrowUpRight /></span>
                             </button>
                         </div>

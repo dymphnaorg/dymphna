@@ -8,15 +8,15 @@ import serviceImg3 from '../assets/Property=Component12.png'
 import serviceImg3Whiten from '../assets/Property=Component14.png'
 import serviceImg4 from '../assets/Property=Component13.png'
 import serviceImg4Whiten from '../assets/Property=Component15.png'
-
+import { GoArrowDownRight } from "react-icons/go";
 
 
 
 function Services() {
     return (
         <div className=' px-5 sm:px-10 w-full dm-sans pb-20' >
-            <div className='w-full h-[200px] md:h-[260px] bg-[#343434] border-[#4C4C4C] border-[12px] rounded-3xl ' >
-                <div className='flex items-center gap-3 md:gap-4 pt-[115px] md:pt-[140px] pl-8' >
+            <div className='w-full h-[180px] md:h-[260px] bg-[#343434] border-[#4C4C4C] border-[12px] rounded-3xl ' >
+                <div className='flex items-center gap-3 md:gap-4 pt-[100px] md:pt-[140px] pl-8' >
                     <FaCircle className="text-[#80BD48] md-w-6 md-h-6 w-4 h-4  " />
                     <h1 style={{ fontWeight: "700" }} className="text-[20px] md:text-[30px] text-white ">
                         Our Services
@@ -29,38 +29,53 @@ function Services() {
                     <h1 className='text-[12px] md:text-[17px] lg:text-[20px]' style={{ fontWeight: "500" }} >tAt Dymphna, we offer a wide range of mental health services designed to support your emotional, cognitive, academic, and personal growth. Whether you're navigating stress, learning challenges, or planning your future, our experienced professionals are here to guide you.</h1>
                 </div>
 
-                <div className='flex flex-col gap-7 pt-4 lg:pt-10' >
-                    <div className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto w-full items-center md:items-center lg:items-start '>
+                <div className='flex flex-col gap-7 pt-4 lg:pt-10'  >
+                    <div id='PsychotherapyandCounseling' className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto w-full items-center md:items-center lg:items-start '>
 
                         {/* LEFT TEXT SECTION */}
-                        <div className='w-full lg:w-[40%] flex flex-col justify-between gap-3'>
+                        <div className='w-full lg:w-[40%] flex flex-col justify-between gap-3 '>
                             <h1 className='text-[18px] md:text-[18px] lg:text-[28px]' style={{ fontWeight: "500" }}>
-                                Psychotherapy and Counseling
+                                Psychotherapy and Counseling <GoArrowDownRight className="inline ml-1 align-middle text-[18px] md:text-[18px] lg:text-[24px]" />
                             </h1>
+
                             <p className='text-[10px] md:text-[14px] lg:text-[15px] text-[#5B5B5B]' style={{ fontWeight: "500" }}>
                                 Psychotherapy and counseling are two forms of mental health support. Psychotherapy explores deep-rooted emotional issues through various approaches like CBT and psychodynamic therapy. Counseling is more short-term and goal-oriented, helping individuals manage specific life challenges. The key difference lies in the depth and focus of treatment.
                             </p>
                         </div>
-
                         <div>
-
                         </div>
-                        {/* Image for small and medium screens only */}
-                        <img
-                            src={serviceImg}
-                            alt="Responsive"
-                            className="block lg:hidden w-[80%] h-auto"
-                        />
 
-                        {/* Image for large screens only */}
-                        <div className='w-full lg:w-[30%]'>
+
+                        <div className="relative w-[80%] lg:w-[30%] h-auto group">
+                            {/* Default image for small screens (dark) */}
                             <img
+                                src={serviceImg}
+                                alt="Dark - small default"
+                                className="block lg:hidden w-full h-auto object-contain"
+                            />
 
+                            {/* Default image for large screens (light) */}
+                            <img
                                 src={serviceImgWhiten}
-                                alt="Responsive"
+                                alt="Light - large default"
                                 className="hidden lg:block w-full h-auto object-contain"
                             />
+
+                            {/* Hover image for small screens (light) */}
+                            <img
+                                src={serviceImgWhiten}
+                                alt="Light on hover - small"
+                                className="absolute inset-0 w-full h-auto object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 block lg:hidden pointer-events-none"
+                            />
+
+                            {/* Hover image for large screens (dark) */}
+                            <img
+                                src={serviceImg}
+                                alt="Dark on hover - large"
+                                className="absolute inset-0 w-full h-auto object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden lg:block pointer-events-none"
+                            />
                         </div>
+
 
 
                         {/* RIGHT BULLET SECTION */}
@@ -110,31 +125,46 @@ function Services() {
 
                     <hr className="w-full border-t border-[#5B5B5B]" />
 
-                    <div className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto w-full py-5  items-center md:items-center lg:items-start'>
+                    <div id='Psychodiagnostics' className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto w-full py-5  items-center md:items-center lg:items-start'>
                         {/* LEFT TEXT SECTION */}
                         <div className='w-full lg:w-[40%] flex flex-col justify-between gap-3'>
                             <h1 className='text-[18px] md:text-[18px] lg:text-[28px]' style={{ fontWeight: "500" }}>
-                                Psychodiagnostics
+                                Psychodiagnostics <GoArrowDownRight className="inline ml-1 align-middle text-[18px] md:text-[18px] lg:text-[24px]" />
                             </h1>
                             <p className='text-[10px] md:text-[14px] lg:text-[15px] text-[#5B5B5B]' style={{ fontWeight: "500" }}>
                                 Psychodiagnostics involves evaluating an individual's psychological state using tests and assessments. It helps professionals understand cognitive, emotional, and behavioral patterns to diagnose issues, plan treatment, and track progress.
                             </p>
                         </div>
 
-                        {/* Image for small and medium screens only */}
-                        <img
-                            src={serviceImg2}
-                            alt="Responsive"
-                            className="block lg:hidden w-[80%] h-auto"
-                        />
 
                         {/* Image for large screens only */}
-                        <div className='w-full lg:w-[30%]'>
+                        <div className="relative w-[80%] lg:w-[30%] h-auto group">
+                            {/* Default image for small screens (dark) */}
                             <img
+                                src={serviceImg2}
+                                alt="Dark - small default"
+                                className="block lg:hidden w-full h-auto object-contain"
+                            />
 
+                            {/* Default image for large screens (light) */}
+                            <img
                                 src={serviceImg2Whiten}
-                                alt="Responsive"
+                                alt="Light - large default"
                                 className="hidden lg:block w-full h-auto object-contain"
+                            />
+
+                            {/* Hover image for small screens (light) */}
+                            <img
+                                src={serviceImg2Whiten}
+                                alt="Light on hover - small"
+                                className="absolute inset-0 w-full h-auto object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 block lg:hidden pointer-events-none"
+                            />
+
+                            {/* Hover image for large screens (dark) */}
+                            <img
+                                src={serviceImg2}
+                                alt="Dark on hover - large"
+                                className="absolute inset-0 w-full h-auto object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden lg:block pointer-events-none"
                             />
                         </div>
 
@@ -167,35 +197,53 @@ function Services() {
                             </div>
                         </div>
                     </div>
+
                     <hr className="w-full border-t border-[#5B5B5B]" />
 
-                    <div className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto py-5 w-full items-center md:items-center lg:items-start'>
+                    <div id='Remedialtraining' className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto py-5 w-full items-center md:items-center lg:items-start'>
                         {/* LEFT TEXT SECTION */}
                         <div className='w-full lg:w-[40%] flex flex-col justify-between gap-3'>
                             <h1 className='text-[18px] md:text-[18px] lg:text-[28px]' style={{ fontWeight: "500" }}>
-                                Remedial training
+                                Remedial training <GoArrowDownRight className="inline ml-1 align-middle text-[18px] md:text-[18px] lg:text-[24px]" />
                             </h1>
                             <p className='text-[10px] md:text-[14px] lg:text-[15px] text-[#5B5B5B]' style={{ fontWeight: "500" }}>
                                 Remedial training is a customized learning method designed to address individual learning gaps. It focuses on helping learners overcome specific challenges through targeted support and instruction.
                             </p>
                         </div>
 
-                        {/* Image for small and medium screens only */}
-                        <img
-                            src={serviceImg3}
-                            alt="Responsive"
-                            className="block lg:hidden w-[80%] h-auto"
-                        />
 
-                        {/* Image for large screens only */}
-                        <div className='w-full lg:w-[30%]'>
+
+
+                        <div className="relative w-[80%] lg:w-[30%] h-auto group">
+                            {/* Default image for small screens (dark) */}
                             <img
+                                src={serviceImg3}
+                                alt="Dark - small default"
+                                className="block lg:hidden w-full h-auto object-contain"
+                            />
 
+                            {/* Default image for large screens (light) */}
+                            <img
                                 src={serviceImg3Whiten}
-                                alt="Responsive"
+                                alt="Light - large default"
                                 className="hidden lg:block w-full h-auto object-contain"
                             />
+
+                            {/* Hover image for small screens (light) */}
+                            <img
+                                src={serviceImg3Whiten}
+                                alt="Light on hover - small"
+                                className="absolute inset-0 w-full h-auto object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 block lg:hidden pointer-events-none"
+                            />
+
+                            {/* Hover image for large screens (dark) */}
+                            <img
+                                src={serviceImg3}
+                                alt="Dark on hover - large"
+                                className="absolute inset-0 w-full h-auto object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden lg:block pointer-events-none"
+                            />
                         </div>
+
 
                         {/* RIGHT BULLET SECTION */}
                         <div className='w-full lg:w-[30%]'>
@@ -240,33 +288,48 @@ function Services() {
                     </div>
                     <hr className="w-full border-t border-[#5B5B5B]" />
 
-                    <div className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto py-5 w-full items-center md:items-center lg:items-start'>
+                    <div id='CareerGuidance' className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto py-5 w-full items-center md:items-center lg:items-start'>
                         {/* LEFT TEXT SECTION */}
                         <div className='w-full lg:w-[40%] flex flex-col justify-between gap-3'>
                             <h1 className='text-[18px] md:text-[18px] lg:text-[28px]' style={{ fontWeight: "500" }}>
-                                Career Guidance
+                                Career Guidance <GoArrowDownRight className="inline ml-1 align-middle text-[18px] md:text-[18px] lg:text-[24px]" />
                             </h1>
                             <p className='text-[10px] md:text-[14px] lg:text-[15px] text-[#5B5B5B]' style={{ fontWeight: "500" }}>
                                 Career guidance helps individuals explore their interests, skills, and values to make informed career choices. It provides direction through self-assessment, expert advice, and planning, leading to a successful and fulfilling career path.
                             </p>
                         </div>
 
-                        {/* Image for small and medium screens only */}
-                        <img
-                            src={serviceImg4}
-                            alt="Responsive"
-                            className="block lg:hidden w-[80%] h-auto"
-                        />
-
-                        {/* Image for large screens only */}
-                        <div className='w-full lg:w-[30%]'>
+                        <div className="relative w-[80%] lg:w-[30%] h-auto group">
+                            {/* Default image for small screens (dark) */}
                             <img
+                                src={serviceImg4}
+                                alt="Dark - small default"
+                                className="block lg:hidden w-full h-auto object-contain"
+                            />
 
+                            {/* Default image for large screens (light) */}
+                            <img
                                 src={serviceImg4Whiten}
-                                alt="Responsive"
+                                alt="Light - large default"
                                 className="hidden lg:block w-full h-auto object-contain"
                             />
+
+                            {/* Hover image for small screens (light) */}
+                            <img
+                                src={serviceImg4Whiten}
+                                alt="Light on hover - small"
+                                className="absolute inset-0 w-full h-auto object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 block lg:hidden pointer-events-none"
+                            />
+
+                            {/* Hover image for large screens (dark) */}
+                            <img
+                                src={serviceImg4}
+                                alt="Dark on hover - large"
+                                className="absolute inset-0 w-full h-auto object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden lg:block pointer-events-none"
+                            />
                         </div>
+
+
 
                         {/* RIGHT BULLET SECTION */}
                         <div className='w-full lg:w-[30%]'>
@@ -309,7 +372,7 @@ function Services() {
                             </div>
                         </div>
                     </div>
-                    <div className='flex flex-col gap-6 lg:pt-10'>
+                    <div id='otherServices' className='flex flex-col gap-6 lg:pt-10'>
                         <h1 className='text-lg lg:text-2xl font-medium' style={{ fontWeight: "500" }}>Other Services</h1>
                         <hr className="w-full border-t border-[#5B5B5B]" />
 
@@ -350,16 +413,8 @@ function Services() {
                             </div>
                         </div>
                     </div>
-
-
-
-
                 </div>
             </div>
-
-
-
-
         </div>
     )
 }

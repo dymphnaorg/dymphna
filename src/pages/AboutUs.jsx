@@ -24,8 +24,8 @@ function AboutUs() {
 
     return (
         <div className='w-full px-5 sm:px-10 dm-sans pb-10' >
-            <div className='w-full h-[200px] md:h-[260px] bg-[#343434] border-[#4C4C4C] border-[12px] rounded-3xl ' >
-                <div className='flex items-center gap-3 md:gap-4 pt-[115px] md:pt-[140px] pl-8' >
+            <div className='w-full h-[180px] md:h-[260px] bg-[#343434] border-[#4C4C4C] border-[12px] rounded-3xl ' >
+                <div className='flex items-center gap-3 md:gap-4 pt-[100px] md:pt-[140px] pl-8' >
                     <FaCircle className="text-[#80BD48] md-w-6 md-h-6 w-4 h-4  " />
                     <h1 style={{ fontWeight: "700" }} className="text-[20px] md:text-[30px] text-white ">
                         About Us

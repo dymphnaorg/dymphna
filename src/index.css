@@ -5,6 +5,11 @@
  font-family: "DM Sans", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 
 .quicksand {
   font-family: "Quicksand", sans-serif;
