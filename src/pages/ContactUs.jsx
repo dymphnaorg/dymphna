@@ -13,7 +13,7 @@ function ContactUs() {
     <div className='dm-sans' >
       <section className="bg-[#343434] text-white ">
         {/* large and medium screen design */}
-        <div className='p-10 hidden md:block' >
+        <div className='p-10 hidden md:block pt-30' >
           <div className='p-5 pb-20 flex w-full gap-10'>
             <div className='w-[30%] flex flex-col '  >
               <div className='flex items-center gap-2 md:gap-2 l:gap-4' >
@@ -107,7 +107,7 @@ function ContactUs() {
 
         {/*  Visible only on small screens  */}     
 
-      <div className="p-10 pb-20 block md:hidden relative">
+      <div className="p-10 pt-30 pb-20 block md:hidden relative">
           {/* Green BG Image — Behind Content */}
           <img
             src={contactimg2} // replace with actual import

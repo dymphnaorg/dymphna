@@ -6,8 +6,15 @@ import HomeServicesIcon3 from '../assets/Group29.png'
 import '../styles/element.css';
 import { LuArrowUpRight } from "react-icons/lu";
 import { FaCircle } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom'
 
 function HomeServiceSection() {
+
+    const navigate = useNavigate();
+    const serviceNavigation = () => {
+        navigate('/services');
+    };
+
     return (
         <>
             <div className="w-full px-5 md:px-10 pt-20 dm-sans">
@@ -106,7 +113,7 @@ function HomeServiceSection() {
                         </div>
 
                         <div className='flex justify-end w-full' >
-                            <button className="w-full max-w-[130px]  sm:max-w-[200px] h-[36px] sm:h-[45px] border-2 border-white text-white rounded-lg flex justify-between items-center px-3 text-[12px] sm:text-base  lg:text-base lg:font-medium  ">
+                            <button onClick={serviceNavigation} className="w-full max-w-[130px]  sm:max-w-[200px] h-[36px] sm:h-[45px] border-2 border-white text-white rounded-lg flex justify-between items-center px-3 text-[12px] sm:text-base  lg:text-base lg:font-medium  ">
                                 Discover More <span className='pl-1' ><LuArrowUpRight /></span>
                             </button>
                         </div>

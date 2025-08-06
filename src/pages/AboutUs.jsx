@@ -1,14 +1,29 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
 import aboutHeaderImg from '../assets/Group58.png'
 import '../styles/element.css'
 import aboutImg from '../assets/Rectangle19(1).png'
 import aboutImg2 from '../assets/Rectangle19(2).png'
 import { FaCircle } from "react-icons/fa";
-import aboutImg3 from '../assets/Component18.png'
+
+import aboutImg3 from '../assets/group3.png'
+import aboutImg4 from '../assets/group4.png'
+import aboutImg5 from '../assets/group14.png'
 
 function AboutUs() {
+    const slideshowImages = [aboutImg3, aboutImg4, aboutImg5];
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % slideshowImages.length);
+        }, 3000); // change image every 3 seconds
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
-        <div className='w-full px-5 sm:px-10 dm-sans' >
+        <div className='w-full px-5 sm:px-10 dm-sans pb-10' >
             <div className='w-full h-[200px] md:h-[260px] bg-[#343434] border-[#4C4C4C] border-[12px] rounded-3xl ' >
                 <div className='flex items-center gap-3 md:gap-4 pt-[115px] md:pt-[140px] pl-8' >
                     <FaCircle className="text-[#80BD48] md-w-6 md-h-6 w-4 h-4  " />
@@ -174,11 +189,18 @@ function AboutUs() {
             </div>
 
             <div className='pt-20' >
-
-                <div className='flex flex-col sm:flex-row items-stretch gap-5 h-auto py-1'>
+                <div className='flex flex-col sm:flex-row  gap-5 h-auto py-1 items-center'>
                     {/* IMAGE - Top on small screens, Left on large screens */}
-                    <div className='w-full sm:w-[30%]'>
-                        <img src={aboutImg3} alt="" className='w-full h-full object-cover' />
+                    <div className="w-full sm:w-[30%] relative overflow-hidden h-[470px]">
+                        {slideshowImages.map((img, index) => (
+                            <img
+                                key={index}
+                                src={img}
+                                alt=""
+                                className={`w-full h-full object-contain absolute top-0 left-0 transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                                    }`}
+                            />
+                        ))}
                     </div>
 
                     {/* TEXT BLOCK */}
@@ -200,18 +222,10 @@ function AboutUs() {
                                     Dymphna's story is one of hope, resilience, and the unwavering commitment to bridging the mental health gap in rural areas. As we forge ahead, our mission remains clear: to empower rural communities, promote mental wellness, and inspire a brighter future for all.
                                 </p>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-
-
-            {/* <div className='about-elemnent' >
-                <div className='cutting' >
-                </div>
-            </div> */}
-
         </div>
     )
 }

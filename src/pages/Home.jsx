@@ -6,8 +6,16 @@ import HomeServiceSection from '../HomeComponents/HomeServiceSection';
 import HomeAdministration from '../HomeComponents/HomeAdministration';
 import HomeGeroPsycology from '../HomeComponents/HomeGeroPsycology';
 import HomeBenefitSection from '../HomeComponents/HomeBenefitSection';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
+
+  const navigate = useNavigate();
+
+    const serviceNavigation = () => {
+        navigate('/services');
+    };
+
   return (
     <div className='' >
 
@@ -24,7 +32,7 @@ function Home() {
 
         {/* Buttons */}
         <div className="flex flex-col items-center gap-5 pt-8">
-          <button className="w-full max-w-[250px] h-[40px] sm:h-[45px] border-2 border-black bg-[#80BD48] text-black rounded-lg font-medium flex justify-center items-center px-3 hover:bg-white duration-300">
+          <button onClick={serviceNavigation} className="w-full max-w-[250px] h-[40px] sm:h-[45px] border-2 border-black bg-[#80BD48] text-black rounded-lg font-medium flex justify-center items-center px-3 hover:bg-white duration-300">
             Explore our services <span className="pl-1"><LuArrowUpRight /></span>
           </button>
           <button className="w-full max-w-[250px] h-[40px] sm:h-[45px] text-black rounded-lg font-medium flex justify-center items-center px-3">
@@ -44,7 +52,7 @@ function Home() {
           <div></div>
           <h1 className="text-[50px] quicksand font-bold md:text-[40px] ">Because Every Mind Matters  Bringing Mental Health to Every Corner.</h1>
           <div className='flex items-center gap-3' >
-            <button className="w-full max-w-[200px]  h-[36px] sm:h-[45px] border-2 border-black bg-[#80BD48]  text-black rounded-lg text-[13px] lg:text-base lg:font-medium
+            <button onClick={serviceNavigation} className="w-full max-w-[200px]  h-[36px] sm:h-[45px] border-2 border-black bg-[#80BD48]  text-black rounded-lg text-[13px] lg:text-base lg:font-medium
 
  flex justify-center items-center px-1 hover:bg-white duration-300">
               Explore our services <span className='pl-1' ><LuArrowUpRight /></span>

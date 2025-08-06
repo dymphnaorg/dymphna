@@ -76,30 +76,29 @@ function HomeGeroPsycology() {
                 </div>
             </div>
 
-            <div className='md:hidden px-5' >
-                <div className='flex gap-3 w-full' >
-                    <div className='w-[40%]' >
+            <div className='md:hidden px-5'>
+                <div className='flex gap-3 w-full'>
+                    <div className='w-[40%]'>
                         <img src={HomeGeroPsycologyImg} alt="Gero Psychology" className="w-full h-auto object-cover" />
                     </div>
-                    <div className='the first text section w-[60%]' >
-                        <div className='flex items-center gap-1 mb-1' >
-                            <FaCircle className="text-[#80BD48] w-2 h-2" />
-                            <h1 className="text-[12px]  font-bold ">
+                    <div className='w-[60%]'>
+                        <div className='flex items-center gap-1 mb-1'>
+                            <FaCircle className="text-[#80BD48] w-[6px] h-[6px]" />
+                            <h1 className="text-[13px] font-bold">
                                 Gero Psychology – 30-Hour Online Course
                             </h1>
                         </div>
 
-                        <p className="text-[10px] pt-3 text-[#5B5B5B]">
+                        <p className="text-[11px] pt-3 text-[#5B5B5B]">
                             This online certification course is designed to empower psychologists and psychology students to understand and support older individuals and their families. It helps participants promote well-being, overcome challenges in later life, and foster maximum potential during the aging process.
                         </p>
-
                     </div>
-
                 </div>
-                <div className='flex justify-between  gap-3 pt-6' >
-                    <div className='flex flex-col gap-4 w-[50%]' >
-                        <h1 className='text-[12px]' style={{ fontWeight: "500" }} >
-                            Gero Psychology Modules :
+
+                <div className='flex justify-between gap-3 pt-6'>
+                    <div className='flex flex-col gap-4 w-[50%]'>
+                        <h1 className='text-[12px] font-medium'>
+                            Gero Psychology Modules:
                         </h1>
                         <div className='flex flex-col gap-2 text-[10px] font-light'>
                             <h1>1. Introduction to Gero Psychology</h1>
@@ -109,39 +108,25 @@ function HomeGeroPsycology() {
                             <h1>5. Physical Health Conditions</h1>
                             <h1>6. Psychopharmacological Treatment</h1>
                         </div>
-
                     </div>
 
-                    <div className="hidden md:flex justify-center">
-                        <div className="w-px h-full relative">
-                            <div className="absolute top-0 left-0 w-px h-1/2 bg-black" />
-                            <div className="absolute bottom-0 left-0 w-px h-1/2 bg-[#8383834c]" />
+                    <div className='flex flex-col gap-4 w-[50%]'>
+                        <div className='flex items-center gap-2'>
+                            <FaCircle className="text-[#80BD48] w-[6px] h-[6px]" />
+                            <h1 className='text-[12px] font-semibold'>
+                                Counseling Essentials – Add-on Module
+                            </h1>
                         </div>
-                    </div>
-
-
-                    <div className='flex flex-col gap-4 w-[50%]' >
-                        <div className='flex items-center gap-3'>
-                            <FaCircle className="text-[#80BD48] w-2 h-2" />
-
-                            <h1 style={{ fontWeight: "600" }} className='text-[12px] ' >Counseling Essentials – Add-on Module</h1>
-                        </div>
-
-                        <div className='flex flex-col gap-2 text-[10px]  font-light'>
+                        <div className='flex flex-col gap-2 text-[10px] font-light'>
                             <h1>1. Personal Awareness</h1>
                             <h1>2. Soft Skills for Psychologists</h1>
                             <h1>3. Counseling Structure and Formation</h1>
                             <h1>4. Ethics and Report Writing</h1>
                         </div>
                     </div>
-
                 </div>
-
             </div>
-
-            <div className='flex justify-between' >
-
-            </div>
+            
 
 
         </div>
