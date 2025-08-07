@@ -38,8 +38,8 @@ function Navbar() {
 
                 {/* Top Bar */}
                 <div className="relative z-10 flex items-center justify-between h-[91px] px-4 text-black">
-                    <div className="flex gap-5 items-center">
-                        <img src={DymphnaLogoImg} alt="Logo" className="w-[45px] h-auto" />
+                    <div className="flex gap-4 items-center">
+                        <img src={DymphnaLogoImg} alt="Logo" className="w-[40px] h-auto" />
                         <HiMiniBars3BottomRight
                             className="text-3xl cursor-pointer"
                             onClick={() => setMenuOpen(!menuOpen)}
@@ -49,7 +49,7 @@ function Navbar() {
                     <div>
                         <button
                             onClick={contactNavigation}
-                            className="border-2 border-black bg-[#80BD48] text-black rounded-lg font-medium flex items-center justify-center px-4 py-2 hover:bg-white duration-300 text-sm"
+                            className="border-2 border-black bg-[#80BD48] text-black rounded-lg font-medium flex items-center justify-center px-3 py-2 hover:bg-white duration-300 text-sm"
                         >
                             Book Now <span className="pl-1"><LuArrowUpRight /></span>
                         </button>
@@ -87,35 +87,74 @@ function Navbar() {
                 </ul>
             </div>
 
+
+
+
+
             {/* Desktop Navbar */}
-            <div className="hidden md:block z-40 fixed w-[100%]">
-                <img
-                    src={navbar}
-                    className="absolute navbar w-full h-[91px] drop-shadow-sm"
-                    alt=""
-                />
-                <div className="relative z-60 flex items-center justify-between h-[91px] px-6 text-black">
-                    <div className="flex items-center gap-8 pl-2 dm-sans font-semibold w-[80%]">
-                        <img
-                            src={DymphnaLogoImg}
-                            alt="logo"
-                            className="w-[50px] sm:w-[65px] h-auto"
-                        />
-                        <ul className="flex gap-15 text-black">
-                            <Link className="hover:underline hover:underline-offset-4 hover:decoration-black transition-all" to="/"><li className="cursor-pointer">Home</li></Link>
-                            <Link className="hover:underline hover:underline-offset-4 hover:decoration-black transition-all" to="/aboutUs"><li className="cursor-pointer">About us</li></Link>
-                            <Link className="hover:underline hover:underline-offset-4 hover:decoration-black transition-all" to="/services"><li className="cursor-pointer">Services</li></Link>
-                        </ul>
-                    </div>
-                    <div className="hidden sm:flex pr-2 w-[13%] justify-end">
-                        <button
-                            onClick={contactNavigation}
-                            className="w-full max-w-[173px] h-[36px] sm:h-[48px] border-2 border-black bg-[#80BD48] text-black rounded-lg text-[13px] lg:text-base lg:font-medium flex justify-center items-center px-1 hover:bg-white duration-300"
-                        >
-                            Book Now <span className="pl-1"><LuArrowUpRight /></span>
-                        </button>
+            <div className="hidden md:block">
+                {/* shows only ABOVE 928px */}
+                <div className="below-928-hide fixed z-40 w-full">
+                    <img
+                        src={navbar}
+                        className="absolute w-full h-[91px] drop-shadow-sm"
+                        alt=""
+                    />
+                    <div className="relative z-60 flex items-center justify-between h-[91px] px-6 text-black">
+                        <div className="flex items-center gap-8 pl-2 dm-sans font-semibold w-[80%]">
+                            <img
+                                src={DymphnaLogoImg}
+                                alt="logo"
+                                className="w-[50px] sm:w-[65px] h-auto"
+                            />
+                            <ul className="flex gap-15 text-black">
+                                <Link className="hover:underline hover:underline-offset-4 hover:decoration-black transition-all" to="/"><li className="cursor-pointer">Home</li></Link>
+                                <Link className="hover:underline hover:underline-offset-4 hover:decoration-black transition-all" to="/aboutUs"><li className="cursor-pointer">About us</li></Link>
+                                <Link className="hover:underline hover:underline-offset-4 hover:decoration-black transition-all" to="/services"><li className="cursor-pointer">Services</li></Link>
+                            </ul>
+                        </div>
+                        <div className="hidden sm:flex pr-2 w-[13%] justify-end">
+                            <button
+                                onClick={contactNavigation}
+                                className="w-full max-w-[173px] h-[36px] sm:h-[48px] border-2 border-black bg-[#80BD48] text-black rounded-lg text-[13px] lg:text-base lg:font-medium flex justify-center items-center px-1 hover:bg-white duration-300"
+                            >
+                                Book Now <span className="pl-1"><LuArrowUpRight /></span>
+                            </button>
+                        </div>
                     </div>
                 </div>
+
+                {/*shows only BELOW 928px */}
+                <div className="below-928-show fixed z-40 w-full bg-[#Ffff] h-[91px] px-6 flex items-center sh justify-between drop-shadow-sm">
+                    {/* Your small screen navbar content */}
+
+                    <div className="relative z-60 flex items-center justify-between h-[91px] px-6 text-black">
+                        <div className="flex items-center gap-8 pl-2 dm-sans font-semibold ">
+                            <img
+                                src={DymphnaLogoImg}
+                                alt="logo"
+                                className="w-[50px] sm:w-[65px] h-auto"
+                            />
+                            <ul className="flex gap-15 text-black">
+                                <Link className="hover:underline hover:underline-offset-4 hover:decoration-black transition-all" to="/"><li className="cursor-pointer">Home</li></Link>
+                                <Link className="hover:underline hover:underline-offset-4 hover:decoration-black transition-all" to="/aboutUs"><li className="cursor-pointer">About us</li></Link>
+                                <Link className="hover:underline hover:underline-offset-4 hover:decoration-black transition-all" to="/services"><li className="cursor-pointer">Services</li></Link>
+                            </ul>
+                        </div>
+                        <div className="hidden sm:flex  justify-end">
+                            <button
+                                onClick={contactNavigation}
+                                className="w-[150px] h-[36px] sm:h-[48px] border-2 border-black bg-[#80BD48] text-black rounded-lg text-[13px] lg:text-base lg:font-medium flex justify-center items-center px-1 hover:bg-white duration-300"
+                            >
+                                Book Now <span className="pl-1"><LuArrowUpRight /></span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
             </div>
         </>
 

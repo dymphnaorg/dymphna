@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
- font-family: "DM Sans", sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 html {
@@ -37,4 +37,25 @@ html {
 
 .animate-scroll:hover {
   animation-play-state: paused;
+}
+
+
+@media (max-width: 927px) {
+  .below-928-show {
+    display: block !important;
+  }
+
+  .below-928-hide {
+    display: none !important;
+  }
+}
+
+@media (min-width: 928px) {
+  .below-928-show {
+    display: none !important;
+  }
+
+  .below-928-hide {
+    display: block !important;
+  }
 }

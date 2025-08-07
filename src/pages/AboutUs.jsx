@@ -32,7 +32,7 @@ function AboutUs() {
                     </h1>
                 </div>
             </div>
-            <div className='sm:pt-10 pt-5' >
+            <div className='sm:pt-10 pt-7' >
                 <div className='flex w-[full] justify-center gap-6' >
                     <div className='w-[25%] float-left' >
                         <img src={aboutImg} alt="" />
@@ -56,7 +56,7 @@ function AboutUs() {
                 </div>
             </div>
 
-            <div className='pt-20' >
+            <div className='sm:pt-20 pt-10' >
                 <h1 className='text-[12px] md:text-[16px] lg:text-[20px]' style={{ fontWeight: "700" }} >Our multifaceted approach included:</h1>
 
                 <div className='flex flex-col gap-5 w-full' >
@@ -118,7 +118,7 @@ function AboutUs() {
                 </div>
             </div>
 
-            <div className='pt-20 flex justify-center' >
+            <div className='sm:pt-20 pt-13 flex justify-center' >
                 <div className='about-element'>
                     <div className='cutting-top-right'></div>
                     <div className='flex flex-col items-center py-4' >
@@ -188,7 +188,7 @@ function AboutUs() {
 
             </div>
 
-            <div className='pt-20' >
+            <div className='sm:pt-20 pt-15' >
                 <div className='flex flex-col sm:flex-row  gap-5 h-auto py-1 items-center'>
                     {/* IMAGE - Top on small screens, Left on large screens */}
                     <div className="w-full sm:w-[30%] relative overflow-hidden h-[470px]">

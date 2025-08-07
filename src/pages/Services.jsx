@@ -24,16 +24,16 @@ function Services() {
                 </div>
             </div>
 
-            <div className='sm:pt-10 pt-5' >
+            <div className='sm:pt-10 pt-0' >
                 <div className='max-w-[1200px]  py-10 sm:py-5'>
                     <h1 className='text-[12px] md:text-[17px] lg:text-[20px]' style={{ fontWeight: "500" }} >tAt Dymphna, we offer a wide range of mental health services designed to support your emotional, cognitive, academic, and personal growth. Whether you're navigating stress, learning challenges, or planning your future, our experienced professionals are here to guide you.</h1>
                 </div>
 
-                <div className='flex flex-col gap-7 pt-4 lg:pt-10'  >
+                <div className='flex flex-col gap-7 sm:pt-10 pt-5'  >
                     <div id='PsychotherapyandCounseling' className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto w-full items-center md:items-center lg:items-start '>
 
                         {/* LEFT TEXT SECTION */}
-                        <div className='w-full lg:w-[40%] flex flex-col justify-between gap-3 '>
+                        <div className='w-full lg:w-[40%] flex flex-col justify-between gap-2'>
                             <h1 className='text-[18px] md:text-[18px] lg:text-[28px]' style={{ fontWeight: "500" }}>
                                 Psychotherapy and Counseling <GoArrowDownRight className="inline ml-1 align-middle text-[18px] md:text-[18px] lg:text-[24px]" />
                             </h1>
@@ -82,7 +82,7 @@ function Services() {
                         <div className='w-full lg:w-[30%]'>
                             <h1 className='text-[12px] md:text-[17px] lg:text-[20px]' style={{ fontWeight: "500" }}>Includes various approaches:</h1>
 
-                            <div className="pt-5 text-[#5B5B5B] flex flex-col gap-4" style={{ fontWeight: "500" }}>
+                            <div className="pt-5 text-[#5B5B5B] flex flex-col gap-2 sm-gap-4" style={{ fontWeight: "500" }}>
                                 <div className="flex items-start gap-2">
                                     <span className="w-[11px] h-[11px] mt-1 rounded-full bg-[#AEAEAE] shrink-0"></span>
                                     <p className="text-[10px] md:text-[14px] lg:text-[15px]">
@@ -104,20 +104,11 @@ function Services() {
                                     </p>
                                 </div>
 
-                                <div className='pt-3 flex flex-col gap-4'>
-                                    <div className="flex items-start gap-2">
-                                        <span className="w-[11px] h-[11px] mt-1 rounded-full bg-[#80BD48] shrink-0"></span>
-                                        <p className="text-[10px] md:text-[14px] lg:text-[15px]">
-                                            Counseling: Focused on current problems and practical solutions.
-                                        </p>
-                                    </div>
-
-                                    <div className="flex items-start gap-2">
-                                        <span className="w-[11px] h-[11px] mt-1 rounded-full bg-[#80BD48] shrink-0"></span>
-                                        <p className="text-[10px] md:text-[14px] lg:text-[15px]">
-                                            Counseling: Focused on current problems and practical solutions.
-                                        </p>
-                                    </div>
+                                <div className="flex items-start gap-2">
+                                    <span className="w-[11px] h-[11px] mt-1 rounded-full bg-[#80BD48] shrink-0"></span>
+                                    <p className="text-[10px] md:text-[14px] lg:text-[15px]">
+                                        Counseling: Focused on current problems and practical solutions.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -125,9 +116,9 @@ function Services() {
 
                     <hr className="w-full border-t border-[#5B5B5B]" />
 
-                    <div id='Psychodiagnostics' className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto w-full py-5  items-center md:items-center lg:items-start'>
+                    <div id='Psychodiagnostics' className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto w-full  items-center md:items-center lg:items-start'>
                         {/* LEFT TEXT SECTION */}
-                        <div className='w-full lg:w-[40%] flex flex-col justify-between gap-3'>
+                        <div className='w-full lg:w-[40%] flex flex-col justify-between gap-2'>
                             <h1 className='text-[18px] md:text-[18px] lg:text-[28px]' style={{ fontWeight: "500" }}>
                                 Psychodiagnostics <GoArrowDownRight className="inline ml-1 align-middle text-[18px] md:text-[18px] lg:text-[24px]" />
                             </h1>
@@ -172,7 +163,7 @@ function Services() {
                         <div className='w-full lg:w-[30%]'>
                             <h1 className='text-[12px] md:text-[17px] lg:text-[20px]' style={{ fontWeight: "500" }}>Evaluates:</h1>
 
-                            <div className="pt-5 flex flex-col gap-4 text-[#5B5B5B]" style={{ fontWeight: "500" }}>
+                            <div className="pt-5 flex flex-col gap-2 sm-gap-4 text-[#5B5B5B]" style={{ fontWeight: "500" }}>
                                 <div className="flex items-start gap-2">
                                     <span className="w-[11px] h-[11px] mt-1 rounded-full bg-[#AEAEAE] shrink-0"></span>
                                     <p className="text-[10px] md:text-[14px] lg:text-[15px]">
@@ -202,7 +193,7 @@ function Services() {
 
                     <div id='Remedialtraining' className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto py-5 w-full items-center md:items-center lg:items-start'>
                         {/* LEFT TEXT SECTION */}
-                        <div className='w-full lg:w-[40%] flex flex-col justify-between gap-3'>
+                        <div className='w-full lg:w-[40%] flex flex-col gap-2 justify-between'>
                             <h1 className='text-[18px] md:text-[18px] lg:text-[28px]' style={{ fontWeight: "500" }}>
                                 Remedial training <GoArrowDownRight className="inline ml-1 align-middle text-[18px] md:text-[18px] lg:text-[24px]" />
                             </h1>
@@ -249,7 +240,7 @@ function Services() {
                         <div className='w-full lg:w-[30%]'>
                             <h1 className='text-[12px] md:text-[17px] lg:text-[20px]' style={{ fontWeight: "500" }}>Key Points:</h1>
 
-                            <div className="pt-5 flex flex-col gap-4 text-[#5B5B5B]" style={{ fontWeight: "500" }}>
+                            <div className="pt-5 flex flex-col gap-2 sm-gap-4 text-[#5B5B5B]" style={{ fontWeight: "500" }}>
                                 <div className="flex items-start gap-2">
                                     <span className="w-[11px] h-[11px] mt-1 rounded-full bg-[#AEAEAE] shrink-0"></span>
                                     <p className="text-[10px] md:text-[14px] lg:text-[15px]">
@@ -290,7 +281,7 @@ function Services() {
 
                     <div id='CareerGuidance' className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto py-5 w-full items-center md:items-center lg:items-start'>
                         {/* LEFT TEXT SECTION */}
-                        <div className='w-full lg:w-[40%] flex flex-col justify-between gap-3'>
+                        <div className='w-full lg:w-[40%] flex flex-col justify-between gap-2'>
                             <h1 className='text-[18px] md:text-[18px] lg:text-[28px]' style={{ fontWeight: "500" }}>
                                 Career Guidance <GoArrowDownRight className="inline ml-1 align-middle text-[18px] md:text-[18px] lg:text-[24px]" />
                             </h1>
@@ -335,7 +326,7 @@ function Services() {
                         <div className='w-full lg:w-[30%]'>
                             <h1 className='text-[12px] md:text-[17px] lg:text-[20px]' style={{ fontWeight: "500" }}>Involves a systematic approach:</h1>
 
-                            <div className="pt-5 flex flex-col gap-4 text-[#5B5B5B]" style={{ fontWeight: "500" }}>
+                            <div className="pt-5 flex flex-col gap-2 sm-gap-4 text-[#5B5B5B]" style={{ fontWeight: "500" }}>
                                 <div className="flex items-start gap-2">
                                     <span className="w-[11px] h-[11px] mt-1 rounded-full bg-[#AEAEAE] shrink-0"></span>
                                     <p className="text-[10px] md:text-[14px] lg:text-[15px]">
