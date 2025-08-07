@@ -13,7 +13,7 @@ function HomStressCalculator() {
             options: [
                 { label: "Good", sub: "7–8 hours/night", points: 0 },
                 { label: "Fair", sub: "5–6 hours/night", points: 2 },
-                { label: "Poor", sub: "<5 hours/night", points: 4 },
+                { label: "Poor", sub: "Less than 5 hours/night", points: 4 },
             ],
         },
         {
@@ -106,7 +106,7 @@ function HomStressCalculator() {
         stressLevel = "Very High Stress";
     }
 
-     const navigate = useNavigate();
+    const navigate = useNavigate();
     const serviceNavigation = () => {
         navigate('/services');
     };
@@ -196,7 +196,7 @@ function HomStressCalculator() {
                                 </div>
 
                                 <div onClick={serviceNavigation} className="text-center flex justify-center mt-6">
-                                    <button  className="text-black font-medium flex items-center justify-center gap-1">
+                                    <button className="text-black font-medium flex items-center justify-center gap-1">
                                         View All Services <span className='pl-2' ><FaArrowRight /></span>
                                     </button>
                                 </div>
@@ -238,13 +238,13 @@ function HomStressCalculator() {
                                     </h2>
 
                                     {/* Options */}
-                                    <div className="space-y-5 w-[70%]">
+                                    <div className="space-y-5 w-full sm:w-[70%]">
                                         {currentQ.options.map((opt, i) => (
                                             <label
                                                 key={i}
                                                 className="flex justify-between items-center border rounded-md px-4 py-3 bg-[#F3F9DC] hover:bg-[#E3EDC9] cursor-pointer w-full text-sm sm:text-base transition"
                                             >
-                                                <div className="flex gap-2 items-center">
+                                                <div className="flex gap-4 items-center">
                                                     <input
                                                         type="radio"
                                                         name={currentQ.name}
@@ -252,10 +252,13 @@ function HomStressCalculator() {
                                                         onChange={() => handleSelect(opt)}
                                                         className="accent-black w-4 h-4"
                                                     />
+                                                    <div className='flex flex-col justify-start' >
+                                                        <span className="font-medium">{opt.label}</span>
+                                                        {opt.sub && <span className="text-gray-600 text-sm">{opt.sub}</span>}
+                                                    </div>
 
-                                                    <span className="font-medium">{opt.label}</span>
                                                 </div>
-                                                {opt.sub && <span className="text-gray-600 text-sm">{opt.sub}</span>}
+
                                             </label>
                                         ))}
                                     </div>

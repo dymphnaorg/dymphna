@@ -1,8 +1,6 @@
 import React from 'react'
-import footerBg from '../assets/Rectangle23.png'
 import footerImg from '../assets/Group34.png'
 import { LuArrowUpRight } from "react-icons/lu";
-import { FaXTwitter } from "react-icons/fa6";
 import { FiFacebook } from "react-icons/fi";
 import { FaInstagram } from "react-icons/fa";
 import { GoArrowUp } from "react-icons/go";
@@ -147,7 +145,7 @@ function Footer() {
               <ul className="flex flex-col gap-1">
                 <Link to="/aboutUs" className='hover:text-[#80BD48] transition-all' > <p>About Us</p></Link>
                 <Link to="/services" className='hover:text-[#80BD48] transition-all' > <p>Careers</p></Link>
-                <Link to="/contactUs" className='hover:text-[#80BD48] transition-all' ><p>Contact Us</p></Link>
+                <Link to="/contactUs" className='hover:text-[#80BD48] transition-all' ><p>Contact</p></Link>
               </ul>
             </div>
           </div>
