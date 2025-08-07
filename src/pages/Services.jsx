@@ -26,7 +26,7 @@ function Services() {
 
             <div className='sm:pt-10 pt-0' >
                 <div className='max-w-[1200px]  py-10 sm:py-5'>
-                    <h1 className='text-[12px] md:text-[17px] lg:text-[20px]' style={{ fontWeight: "500" }} >tAt Dymphna, we offer a wide range of mental health services designed to support your emotional, cognitive, academic, and personal growth. Whether you're navigating stress, learning challenges, or planning your future, our experienced professionals are here to guide you.</h1>
+                    <h1 className='text-[12px] md:text-[17px] lg:text-[20px]' style={{ fontWeight: "500" }} >At Dymphna, we offer a wide range of mental health services designed to support your emotional, cognitive, academic, and personal growth. Whether you're navigating stress, learning challenges, or planning your future, our experienced professionals are here to guide you.</h1>
                 </div>
 
                 <div className='flex flex-col gap-7 sm:pt-10 pt-5'  >
