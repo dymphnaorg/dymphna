@@ -84,12 +84,12 @@ function HomeGeroPsycology() {
                     <div className='w-[60%]'>
                         <div className='flex items-center gap-1 mb-1'>
                             <FaCircle className="text-[#80BD48] w-[6px] h-[6px]" />
-                            <h1 className="text-[13px] font-bold">
+                            <h1 className="text-[12px] sm:text-[20px] font-bold">
                                 Gero Psychology – 30-Hour Online Course
                             </h1>
                         </div>
 
-                        <p className="text-[11px] pt-3 text-[#5B5B5B]">
+                        <p className="text-[11px] sm:text-[19px] pt-3 text-[#5B5B5B]">
                             This online certification course is designed to empower psychologists and psychology students to understand and support older individuals and their families. It helps participants promote well-being, overcome challenges in later life, and foster maximum potential during the aging process.
                         </p>
                     </div>
@@ -97,10 +97,10 @@ function HomeGeroPsycology() {
 
                 <div className='flex justify-between gap-3 pt-6'>
                     <div className='flex flex-col gap-4 w-[50%]'>
-                        <h1 className='text-[12px] font-medium'>
+                        <h1 className='text-[12px] sm:text-[20px] font-medium'>
                             Gero Psychology Modules:
                         </h1>
-                        <div className='flex flex-col gap-2 text-[10px] font-light'>
+                        <div className='flex flex-col gap-2 text-[11px] sm:text-[19px] font-light'>
                             <h1>1. Introduction to Gero Psychology</h1>
                             <h1>2. Aging and Life Cycle</h1>
                             <h1>3. Examination in the Elderly</h1>
@@ -112,12 +112,12 @@ function HomeGeroPsycology() {
 
                     <div className='flex flex-col gap-4 w-[50%]'>
                         <div className='flex items-center gap-2'>
-                            <FaCircle className="text-[#80BD48] w-[6px] h-[6px]" />
-                            <h1 className='text-[12px] font-semibold'>
+                            <FaCircle className="text-[#80BD48] w-2 h-2 sm:md:w-3 sm:md:h-3 md:w-4 md:h-4 lg:w-4 lg:h-4" />
+                            <h1 className='text-[12px] sm:text-[20px] font-semibold'>
                                 Counseling Essentials – Add-on Module
                             </h1>
                         </div>
-                        <div className='flex flex-col gap-2 text-[10px] font-light'>
+                        <div className='flex flex-col gap-2 text-[11px] sm:text-[19px] font-light'>
                             <h1>1. Personal Awareness</h1>
                             <h1>2. Soft Skills for Psychologists</h1>
                             <h1>3. Counseling Structure and Formation</h1>

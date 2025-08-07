@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import homeIntroImg from '../assets/Group37.png'
 import { LuArrowUpRight } from "react-icons/lu";
 import homeImg2 from '../assets/Rectangle5.png'
@@ -7,21 +7,28 @@ import HomeAdministration from '../HomeComponents/HomeAdministration';
 import HomeGeroPsycology from '../HomeComponents/HomeGeroPsycology';
 import HomeBenefitSection from '../HomeComponents/HomeBenefitSection';
 import { useNavigate } from 'react-router-dom';
+import HomStressCalculator from '../HomeComponents/HomStressCalculator';
 
 function Home() {
-
+  const [showPopup, setShowPopup] = useState(false);
+  const handleClose = () => setShowPopup(false);
   const navigate = useNavigate();
+  const serviceNavigation = () => {
+    navigate('/services');
+  };
 
-    const serviceNavigation = () => {
-        navigate('/services');
-    };
+  const aboutNavigation = () => {
+    navigate('/aboutUs');
+  }
 
-    const aboutNavigation = ()=>{
-      navigate('/aboutUs');
-    }
 
   return (
     <div className='' >
+      {showPopup && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center  bg-opacity-20 backdrop-blur-sm p-10">
+          <HomStressCalculator />
+        </div>
+      )}
 
       <div className="flex flex-col items-center justify-start px-10 pt-30 md:hidden">
         {/* Heading */}
@@ -39,11 +46,11 @@ function Home() {
           <button onClick={serviceNavigation} className="w-full max-w-[250px] h-[40px] sm:h-[45px] border-2 border-black bg-[#80BD48] text-black rounded-lg font-medium flex justify-center items-center px-3 hover:bg-white duration-300">
             Explore our services <span className="pl-1"><LuArrowUpRight /></span>
           </button>
-          <button className="w-full max-w-[250px] h-[40px] sm:h-[45px] text-black rounded-lg font-medium flex justify-center items-center px-3">
+          <button onClick={() => setShowPopup(true)} className="w-full max-w-[250px] h-[40px] sm:h-[45px] text-black rounded-lg font-medium flex justify-center items-center px-3">
             Try Stress Calculator <span className="pl-1"><LuArrowUpRight /></span>
           </button>
         </div>
-        <div className='flex w-full text-left  pt-8 text-[12px] text-[#4C4C4C]' >
+        <div className='flex w-full text-left  pt-8 text-[10px] sm:text-[20px] text-[#4C4C4C]' >
           <p>At Dymphna, we’re transforming rural mental health care through compassion, innovation, and accessibility. From stress management to psychotherapy, we’re here to support your journey toward emotional well-being—wherever you are.</p>
         </div>
 
@@ -61,7 +68,7 @@ function Home() {
  flex justify-center items-center px-1 hover:bg-white duration-300">
               Explore our services <span className='pl-1' ><LuArrowUpRight /></span>
             </button>
-            <button className="w-full max-w-[200px]  h-[36px] sm:h-[45px] text-black rounded-lg text-[13px] lg:text-base lg:font-medium
+            <button onClick={() => setShowPopup(true)} className="w-full max-w-[200px]  h-[36px] sm:h-[45px] text-black rounded-lg text-[13px] lg:text-base lg:font-medium
 
  flex justify-center items-center">
               Try Stress Calculator <span className='pl-1' ><LuArrowUpRight /></span>

@@ -95,7 +95,7 @@ function Footer() {
                   <a href="https://www.facebook.com/share/1ChzWMYXsU/"><FiFacebook /></a>
                 </div>
                 <div className="w-10 h-10 border border-[#6D6D6D] text-black flex items-center justify-center rounded-lg hover:text-[#6D6D6D] transition-all">
-                  <a href="https://wa.me/8943340620"><FaWhatsapp /></a>
+                  <a href="https://wa.me/+91 8943340620"><FaWhatsapp /></a>
                 </div>
                 <div className="w-10 h-10 border border-[#6D6D6D] text-black flex items-center justify-center rounded-lg hover:text-[#6D6D6D] transition-all">
                   <a href="https://www.google.com/maps/place/10%C2%B035'24.1%22N+76%C2%B028'35.3%22E/@10.5900192,76.4738884,17z/data=!3m1!4b1!4m4!3m3!8m2!3d10.5900192!4d76.4764633?hl=en&entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"><SiGooglemaps /></a>
@@ -166,7 +166,7 @@ function Footer() {
               <a href="https://www.facebook.com/share/1ChzWMYXsU/"><FiFacebook /></a>
             </div>
             <div className="w-10 h-10 border border-[#6D6D6D] text-black flex items-center justify-center rounded-lg hover:text-[#6D6D6D] transition-all">
-              <a href="https://wa.me/8943340620"><FaWhatsapp /></a>
+              <a href="https://wa.me/+91 8943340620"><FaWhatsapp /></a>
             </div>
             <div className="w-10 h-10 border border-[#6D6D6D] text-black flex items-center justify-center rounded-lg hover:text-[#6D6D6D] transition-all">
               <a href="https://www.google.com/maps/place/10%C2%B035'24.1%22N+76%C2%B028'35.3%22E/@10.5900192,76.4738884,17z/data=!3m1!4b1!4m4!3m3!8m2!3d10.5900192!4d76.4764633?hl=en&entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"><SiGooglemaps /></a>

@@ -49,7 +49,7 @@ function Navbar() {
                     <div>
                         <button
                             onClick={contactNavigation}
-                            className="w-full max-w-[173px] h-[48px] border-2 border-black bg-[#80BD48] text-black rounded-lg font-medium flex justify-center items-center px-1 hover:bg-white duration-300"
+                            className="border-2 border-black bg-[#80BD48] text-black rounded-lg font-medium flex items-center justify-center px-4 py-2 hover:bg-white duration-300 text-sm"
                         >
                             Book Now <span className="pl-1"><LuArrowUpRight /></span>
                         </button>
