@@ -30,7 +30,7 @@ function Services() {
                 </div>
 
                 <div className='flex flex-col gap-7 sm:pt-10 pt-5'  >
-                    <div id='PsychotherapyandCounseling' className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto w-full items-center md:items-center lg:items-start '>
+                    <div id='PsychotherapyandCounseling' className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto w-full items-center md:items-center lg:items-start scroll-mt-30'>
 
                         {/* LEFT TEXT SECTION */}
                         <div className='w-full lg:w-[40%] flex flex-col justify-between gap-2'>
@@ -113,7 +113,7 @@ function Services() {
 
                     <hr className="w-full border-t border-[#5B5B5B]" />
 
-                    <div id='Psychodiagnostics' className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto w-full  items-center md:items-center lg:items-start'>
+                    <div id='Psychodiagnostics' className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto w-full  items-center md:items-center lg:items-start scroll-mt-30'>
                         {/* LEFT TEXT SECTION */}
                         <div className='w-full lg:w-[40%] flex flex-col justify-between gap-2'>
                             <h1 className='text-[18px] md:text-[18px] lg:text-[28px]' style={{ fontWeight: "500" }}>
@@ -188,7 +188,7 @@ function Services() {
 
                     <hr className="w-full border-t border-[#5B5B5B]" />
 
-                    <div id='Remedialtraining' className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto py-5 w-full items-center md:items-center lg:items-start'>
+                    <div id='Remedialtraining' className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto py-5 w-full items-center md:items-center lg:items-start scroll-mt-30'>
                         {/* LEFT TEXT SECTION */}
                         <div className='w-full lg:w-[40%] flex flex-col gap-2 justify-between'>
                             <h1 className='text-[18px] md:text-[18px] lg:text-[28px]' style={{ fontWeight: "500" }}>
@@ -273,7 +273,7 @@ function Services() {
                     </div>
                     <hr className="w-full border-t border-[#5B5B5B]" />
 
-                    <div id='CareerGuidance' className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto py-5 w-full items-center md:items-center lg:items-start'>
+                    <div id='CareerGuidance' className='flex flex-col lg:flex-row gap-8 sm:gap-5 h-auto py-5 w-full items-center md:items-center lg:items-start scroll-mt-30'>
                         {/* LEFT TEXT SECTION */}
                         <div className='w-full lg:w-[40%] flex flex-col justify-between gap-2'>
                             <h1 className='text-[18px] md:text-[18px] lg:text-[28px]' style={{ fontWeight: "500" }}>
@@ -357,7 +357,7 @@ function Services() {
                             </div>
                         </div>
                     </div>
-                    <div id='otherServices' className='flex flex-col gap-6 lg:pt-10'>
+                    <div id='otherServices' className='flex flex-col gap-6 lg:pt-10 scroll-mt-20'>
                         <h1 className='text-[18px] md:text-[18px] lg:text-[28px]' style={{ fontWeight: "500" }}>Other Services</h1>
                         <hr className="w-full border-t border-[#5B5B5B]" />
 

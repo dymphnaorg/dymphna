@@ -50,13 +50,13 @@ function Footer() {
                     </div>
 
                   </div>
-                  <div  className='pt-5'>
+                  <div className='pt-5'>
                     <h1 style={{ fontWeight: "700" }} className='text-[20px] text-[#696969]'>
                       OTHER SERVICE
                     </h1>
                     <div className='pt-3 flex flex-col gap-2 text-white' >
-                     <a className='hover:text-[#80BD48] transition-all' href="/services#otherServices"><p >Sports psychology</p></a> 
-                     <a className='hover:text-[#80BD48] transition-all' href="/services#otherServices"><p>Internships</p></a> 
+                      <a className='hover:text-[#80BD48] transition-all' href="/services#otherServices"><p >Sports psychology</p></a>
+                      <a className='hover:text-[#80BD48] transition-all' href="/services#otherServices"><p>Internships</p></a>
                     </div>
 
                   </div>
@@ -81,8 +81,8 @@ function Footer() {
                 Book Now <span className='pl-1'><LuArrowUpRight /></span>
               </button>
 
-              <div className='text-[48px] text-white font-bold'>
-                Because Every Mind Matters.
+              <div className='text-[48px] text-white leading-tight font-bold '>
+                <h1 className='text-left'>Because Every Mind <br />Matters.</h1>
               </div>
 
               <div className='flex gap-3'>
@@ -152,7 +152,7 @@ function Footer() {
 
           {/* Quote */}
           <div className="text-white font-semibold text-[20px] mt-8 leading-tight">
-            Because Every Mind Matters.
+            <h1 className='text-left'>Because Every Mind <br />Matters.</h1>
           </div>
 
           {/* Social Icons */}
