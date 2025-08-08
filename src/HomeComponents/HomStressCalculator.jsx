@@ -215,10 +215,10 @@ function HomStressCalculator() {
                                 <div className="px-4 py-2 flex flex-col gap-1">
                                     <div>
                                         {/* Warning */}
-                                        <div className="flex flex-col items-end pt-2 ">
+                                        <div className="flex flex-col items-center sm:items-end sm:py-0 py-3 ">
                                             <div className='flex gap-2 items-center ' >
                                                 <IoIosWarning className='text-[#FE8401]' />
-                                                <span className="text-[#343434] text-[14px] md:text-[15px]">
+                                                <span className="text-[#343434] text-[10px] sm:text-[15px]">
                                                     This tool is not scientifically validated
                                                 </span>
                                             </div>
@@ -232,7 +232,7 @@ function HomStressCalculator() {
                                             </p>
 
                                             {/* Progress Bar */}
-                                            <div className="w-full h-2 bg-gray-300 rounded-full overflow-hidden mb-6">
+                                            <div className="w-full h-2 bg-gray-300 rounded-full overflow-hidden mb-3 sm:mb-6">
                                                 <div
                                                     className="h-full bg-gradient-to-b from-[#FFB00A] to-[#FE8401] transition-all duration-500"
                                                     style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
@@ -248,16 +248,16 @@ function HomStressCalculator() {
                                         <div className="w-full max-w-[500px] mx-auto flex flex-col items-center px-4">
 
                                             {/* Question Text */}
-                                            <h2 className="text-center text-[20px] md:text-[24px] font-semibold mb-6">
+                                            <h2 className="text-center text-[17px] sm:text-[24px] font-semibold mb-3 sm:mb-6">
                                                 {currentQ.question}
                                             </h2>
 
                                             {/* Options */}
-                                            <div className="space-y-3 w-full sm:w-[70%]">
+                                            <div className=" space-y-2 sm:space-y-3 w-full sm:w-[70%]">
                                                 {currentQ.options.map((opt, i) => (
                                                     <label
                                                         key={i}
-                                                        className="flex justify-between items-center border-[1px] border-[#BBD74F] bg-[#BBD74F5C] rounded-md px-4 py-3  hover:bg-[#E3EDC9] cursor-pointer w-full text-sm sm:text-base transition"
+                                                        className="flex justify-between items-center border-[1px] border-[#BBD74F] bg-[#BBD74F5C] rounded-md px-4 py-2 sm:py-3  hover:bg-[#E3EDC9] cursor-pointer w-full text-sm sm:text-base transition"
                                                     >
                                                         <div className="flex gap-4 items-center">
                                                             <input
