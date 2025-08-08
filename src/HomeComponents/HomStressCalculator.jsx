@@ -115,15 +115,15 @@ function HomStressCalculator() {
     return (
 
 
-        <div className="bg-white rounded-3xl flex flex-col items-center h-auto md:h-[600px] w-[95%] max-w-[750px] shadow-md mx-auto ">
+        <div className="bg-white rounded-3xl flex flex-col items-center h-auto w-[95%] max-w-[750px] shadow-md mx-auto ">
             {/* Header */}
-            <div className="h-[100px] w-[90%] bg-[#80BD48] rounded-b-3xl">
-                <div className="pt-[20px] md:pt-[27px] pl-6">
-                    <div className="flex items-center gap-3 md:gap-2">
+            <div className="h-[80px] sm:h-[100px] w-[90%] bg-[#80BD48] rounded-b-3xl">
+                <div className="sm:pt-[27px] pt-[17px]  pl-6">
+                    <div className="flex items-center sm:gap-1 gap-3 md:gap-2">
                         <FaCircle className="text-[#343434] w-3 h-3 md:w-5 md:h-5" />
                         <h1
                             style={{ fontWeight: "600" }}
-                            className="text-[20px] md:text-[24px]"
+                            className=" sm:text-[24px] text-[15px] "
                         >
                             Stress Calculator
                         </h1>
@@ -131,190 +131,191 @@ function HomStressCalculator() {
                     <p className="text-[14px]">A rough estimate of your current stress</p>
                 </div>
             </div>
+            <div className='sm:pb-10 pb-5 w-full flex justify-center' >
+                {
+                    submitted ?
+                        (
+                            <div className="w-full py-10 flex flex-col items-center justify-center">
+                                {/* Stress level text */}
+                                <p className="text-center text-lg font-semibold mb-4">
+                                    {stressLevel}
+                                </p>
 
-            {
-                submitted ?
-                    (
-                        <div className="w-full py-10 flex flex-col items-center justify-center">
-                            {/* Stress level text */}
-                            <p className="text-center text-lg font-semibold mb-4">
-                                {stressLevel}
-                            </p>
+                                {/* Meter */}
+                                {/* Stress Meter Container */}
+                                <div className="relative w-full sm:max-w-[500px] max-w-[260px]">
 
-                            {/* Meter */}
-                            {/* Stress Meter Container */}
-                            <div className="relative w-full sm:max-w-[500px] max-w-[260px]">
-
-                                {/* Arrow pointing to current stress level */}
-                                <div
-                                    className="absolute -top-4 z-20"
-                                    style={{
-                                        left: `${leftPosition}%`,
-                                        transform: "translateX(-50%)",
-                                    }}
-                                >
-                                    <div className="w-0 h-0 border-l-[6px] border-r-[6px] border-b-[10px] border-l-transparent border-r-transparent border-b-yellow-500"></div>
-                                </div>
-
-                                {/* Colored Bar */}
-                                <div className="relative w-full sm:h-12 h-8 bg-gradient-to-r from-green-300 via-yellow-200 to-red-300 rounded-full overflow-hidden">
-                                    {/* Divider Lines */}
-                                    <div className="absolute left-1/3 top-0 bottom-0 w-[1px] bg-gray-400"></div>
-                                    <div className="absolute left-2/3 top-0 bottom-0 w-[1px] bg-gray-400"></div>
-                                </div>
-                            </div>
-
-                            {/* Labels */}
-                            <div className="flex justify-between w-full sm:max-w-[500px] max-w-[260px] mt-2 text-sm text-gray-700 px-1">
-                                <span>Low</span>
-                                <span>Moderate</span>
-                                <span>High</span>
-                                <span>Very High</span>
-                            </div>
-
-
-                            {/* Recommendations */}
-                            <div className="mt-10 w-full  space-y-5 px-10">
-                                <div className='flex flex-col items-start gap-2' >
-                                    <p className="text-md font-semibold text-center">Recommended for You!</p>
-                                    <p className="text-center text-sm text-[#343434]">
-                                        Based on your result, we suggest exploring the following stress-relief options
-                                    </p>
-                                </div>
-
-
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-                                    <div className="border-[1px] border-[#BBD74F] bg-[#BBD74F5C] p-4 rounded-xl shadow-sm">
-                                        <p className="font-semibold">Psychotherapy & Counseling</p>
-                                        <p className="text-sm text-gray-700 mt-1">
-                                            Work with a licensed therapist to uncover stress triggers, build coping skills,
-                                            and boost emotional resilience.
-                                        </p>
+                                    {/* Arrow pointing to current stress level */}
+                                    <div
+                                        className="absolute -top-4 z-20"
+                                        style={{
+                                            left: `${leftPosition}%`,
+                                            transform: "translateX(-50%)",
+                                        }}
+                                    >
+                                        <div className="w-0 h-0 border-l-[6px] border-r-[6px] border-b-[10px] border-l-transparent border-r-transparent border-b-yellow-500"></div>
                                     </div>
-                                    <div className="border-[1px] border-[#BBD74F] bg-[#BBD74F5C] p-4 rounded-xl shadow-sm">
-                                        <p className="font-semibold">Psychodiagnostics</p>
-                                        <p className="text-sm text-gray-700 mt-1">
-                                            Gain clarity on your emotional and cognitive patterns through personalized psychological assessments.
-                                        </p>
+
+                                    {/* Colored Bar */}
+                                    <div className="relative w-full sm:h-12 h-8 bg-gradient-to-r from-green-300 via-yellow-200 to-red-300 rounded-full overflow-hidden">
+                                        {/* Divider Lines */}
+                                        <div className="absolute left-1/3 top-0 bottom-0 w-[1px] bg-gray-400"></div>
+                                        <div className="absolute left-2/3 top-0 bottom-0 w-[1px] bg-gray-400"></div>
                                     </div>
                                 </div>
 
-                                <div onClick={serviceNavigation} className="text-center flex justify-center mt-6">
-                                    <button className="text-black font-medium flex items-center justify-center gap-1">
-                                        View All Services <span className='pl-2' ><FaArrowRight /></span>
-                                    </button>
+                                {/* Labels */}
+                                <div className="flex justify-between w-full sm:max-w-[500px] max-w-[260px] mt-2 text-sm text-gray-700 px-1">
+                                    <span>Low</span>
+                                    <span>Moderate</span>
+                                    <span>High</span>
+                                    <span>Very High</span>
                                 </div>
-                            </div>
-                        </div>
 
-                    )
-                    :
-                    (
 
-                        <div className='w-[90%]' >
-                            <div className="px-4 py-2 flex flex-col gap-1">
-                                <div>
-                                    {/* Warning */}
-                                    <div className="flex flex-col items-end pt-2 ">
-                                        <div className='flex gap-2 items-center ' >
-                                            <IoIosWarning className='text-[#FE8401]' />
-                                            <span className="text-[#343434] text-[14px] md:text-[15px]">
-                                                This tool is not scientifically validated
-                                            </span>
+                                {/* Recommendations */}
+                                <div className="mt-10 w-full  space-y-5 px-10">
+                                    <div className='flex flex-col items-start gap-2' >
+                                        <p className="text-md font-semibold text-center">Recommended for You!</p>
+                                        <p className="text-center text-sm text-[#343434]">
+                                            Based on your result, we suggest exploring the following stress-relief options
+                                        </p>
+                                    </div>
+
+
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                                        <div className="border-[1px] border-[#BBD74F] bg-[#BBD74F5C] p-4 rounded-xl shadow-sm">
+                                            <p className="font-semibold">Psychotherapy & Counseling</p>
+                                            <p className="text-sm text-gray-700 mt-1">
+                                                Work with a licensed therapist to uncover stress triggers, build coping skills,
+                                                and boost emotional resilience.
+                                            </p>
                                         </div>
-
+                                        <div className="border-[1px] border-[#BBD74F] bg-[#BBD74F5C] p-4 rounded-xl shadow-sm">
+                                            <p className="font-semibold">Psychodiagnostics</p>
+                                            <p className="text-sm text-gray-700 mt-1">
+                                                Gain clarity on your emotional and cognitive patterns through personalized psychological assessments.
+                                            </p>
+                                        </div>
                                     </div>
 
+                                    <div onClick={serviceNavigation} className="text-center flex justify-center mt-6">
+                                        <button className="text-black font-medium flex items-center justify-center gap-1">
+                                            View All Services <span className='pl-2' ><FaArrowRight /></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        )
+                        :
+                        (
+
+                            <div className='w-[90%]' >
+                                <div className="px-4 py-2 flex flex-col gap-1">
                                     <div>
-                                        {/* Progress Step Counter */}
-                                        <p className="text-sm text-gray-600 self-start mb-1">
-                                            Step {currentIndex + 1} of {questions.length}
-                                        </p>
+                                        {/* Warning */}
+                                        <div className="flex flex-col items-end pt-2 ">
+                                            <div className='flex gap-2 items-center ' >
+                                                <IoIosWarning className='text-[#FE8401]' />
+                                                <span className="text-[#343434] text-[14px] md:text-[15px]">
+                                                    This tool is not scientifically validated
+                                                </span>
+                                            </div>
 
-                                        {/* Progress Bar */}
-                                        <div className="w-full h-2 bg-gray-300 rounded-full overflow-hidden mb-6">
-                                            <div
-                                                className="h-full bg-gradient-to-b from-[#FFB00A] to-[#FE8401] transition-all duration-500"
-                                                style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
-                                            ></div>
                                         </div>
+
+                                        <div>
+                                            {/* Progress Step Counter */}
+                                            <p className="text-sm text-gray-600 self-start mb-1">
+                                                Step {currentIndex + 1} of {questions.length}
+                                            </p>
+
+                                            {/* Progress Bar */}
+                                            <div className="w-full h-2 bg-gray-300 rounded-full overflow-hidden mb-6">
+                                                <div
+                                                    className="h-full bg-gradient-to-b from-[#FFB00A] to-[#FE8401] transition-all duration-500"
+                                                    style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
+                                                ></div>
+                                            </div>
+                                        </div>
+
                                     </div>
 
-                                </div>
+                                    {/* Question */}
+                                    <div className='flex flex-col items-center w-full' >
 
-                                {/* Question */}
-                                <div className='flex flex-col items-center w-full' >
+                                        <div className="w-full max-w-[500px] mx-auto flex flex-col items-center px-4">
 
-                                    <div className="w-full max-w-[500px] mx-auto flex flex-col items-center px-4">
+                                            {/* Question Text */}
+                                            <h2 className="text-center text-[20px] md:text-[24px] font-semibold mb-6">
+                                                {currentQ.question}
+                                            </h2>
 
-                                        {/* Question Text */}
-                                        <h2 className="text-center text-[20px] md:text-[24px] font-semibold mb-6">
-                                            {currentQ.question}
-                                        </h2>
+                                            {/* Options */}
+                                            <div className="space-y-3 w-full sm:w-[70%]">
+                                                {currentQ.options.map((opt, i) => (
+                                                    <label
+                                                        key={i}
+                                                        className="flex justify-between items-center border-[1px] border-[#BBD74F] bg-[#BBD74F5C] rounded-md px-4 py-3  hover:bg-[#E3EDC9] cursor-pointer w-full text-sm sm:text-base transition"
+                                                    >
+                                                        <div className="flex gap-4 items-center">
+                                                            <input
+                                                                type="radio"
+                                                                name={currentQ.name}
+                                                                checked={answers[currentQ.name]?.label === opt.label}
+                                                                onChange={() => handleSelect(opt)}
+                                                                className="accent-black w-4 h-4"
+                                                            />
+                                                            <div className='flex flex-col justify-start' >
+                                                                <span className="font-medium">{opt.label}</span>
+                                                                {opt.sub && <span className="text-gray-600 text-sm">{opt.sub}</span>}
+                                                            </div>
 
-                                        {/* Options */}
-                                        <div className="space-y-3 w-full sm:w-[70%]">
-                                            {currentQ.options.map((opt, i) => (
-                                                <label
-                                                    key={i}
-                                                    className="flex justify-between items-center border-[1px] border-[#BBD74F] bg-[#BBD74F5C] rounded-md px-4 py-3  hover:bg-[#E3EDC9] cursor-pointer w-full text-sm sm:text-base transition"
-                                                >
-                                                    <div className="flex gap-4 items-center">
-                                                        <input
-                                                            type="radio"
-                                                            name={currentQ.name}
-                                                            checked={answers[currentQ.name]?.label === opt.label}
-                                                            onChange={() => handleSelect(opt)}
-                                                            className="accent-black w-4 h-4"
-                                                        />
-                                                        <div className='flex flex-col justify-start' >
-                                                            <span className="font-medium">{opt.label}</span>
-                                                            {opt.sub && <span className="text-gray-600 text-sm">{opt.sub}</span>}
                                                         </div>
 
-                                                    </div>
+                                                    </label>
+                                                ))}
+                                            </div>
 
-                                                </label>
-                                            ))}
-                                        </div>
-
-                                        {/* Buttons */}
-                                        <div className="flex justify-between items-center mt-5 flex-col sm:flex-row gap-4 w-full">
-                                            <button
-                                                disabled={currentIndex === 0}
-                                                onClick={() => setCurrentIndex((prev) => prev - 1)}
-                                                className="border border-black px-5 py-1 rounded-[6px] flex items-center gap-2 hover:bg-gray-100 transition w-full sm:w-auto justify-center disabled:opacity-50 text-black"
-                                            >
-                                                <FaArrowLeft />
-                                                Back
-                                            </button>
-
-                                            {currentIndex < questions.length - 1 ? (
+                                            {/* Buttons */}
+                                            <div className="flex justify-between items-center mt-5 flex-row gap-4 w-full">
                                                 <button
-                                                    onClick={handleNext}
-                                                    disabled={!answers[currentQ.name]}
-                                                    className="bg-[#80BD48] text-black px-5 py-1 rounded-[6px] flex items-center gap-2 hover:bg-white border border-black transition w-full sm:w-auto justify-center"
+                                                    disabled={currentIndex === 0}
+                                                    onClick={() => setCurrentIndex((prev) => prev - 1)}
+                                                    className="border border-black px-5 py-1 rounded-[6px] flex items-center gap-2 hover:bg-gray-100 transition  sm:w-auto justify-center disabled:opacity-50 text-black"
                                                 >
-                                                    Next
-                                                    <FaArrowRight />
+                                                    <FaArrowLeft />
+                                                    Back
                                                 </button>
-                                            ) : (
-                                                <button
-                                                    onClick={() => setSubmitted(true)}
-                                                    className="bg-[#80BD48] text-black px-5 py-1 rounded-[6px] flex items-center gap-2 hover:bg-white border border-black transition w-full sm:w-auto justify-center"
-                                                >
-                                                    Submit
-                                                </button>
-                                            )}
+
+                                                {currentIndex < questions.length - 1 ? (
+                                                    <button
+                                                        onClick={handleNext}
+                                                        disabled={!answers[currentQ.name]}
+                                                        className="bg-[#80BD48] text-black px-5 py-1 rounded-[6px] flex items-center gap-2 hover:bg-white border border-black transition  sm:w-auto justify-center"
+                                                    >
+                                                        Next
+                                                        <FaArrowRight />
+                                                    </button>
+                                                ) : (
+                                                    <button
+                                                        onClick={() => setSubmitted(true)}
+                                                        className="bg-[#80BD48] text-black px-5 py-1 rounded-[6px] flex items-center gap-2 hover:bg-white border border-black transition sm:w-auto justify-center"
+                                                    >
+                                                        Submit
+                                                    </button>
+                                                )}
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
-
                             </div>
-                        </div>
 
-                    )
-            }
+                        )
+                }
+            </div>
         </div>
 
     )
