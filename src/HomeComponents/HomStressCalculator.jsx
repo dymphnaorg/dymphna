@@ -215,8 +215,8 @@ function HomStressCalculator() {
                                 <div className="px-4 py-2 flex flex-col gap-1">
                                     <div>
                                         {/* Warning */}
-                                        <div className="flex flex-col items-center sm:items-end sm:py-0 py-3 ">
-                                            <div className='flex gap-2 items-center ' >
+                                        <div className="flex flex-col items-center sm:items-end sm:py-0 py-3  ">
+                                            <div className='flex gap-2 items-center pt-0 sm:pt-5' >
                                                 <IoIosWarning className='text-[#FE8401]' />
                                                 <span className="text-[#343434] text-[10px] sm:text-[15px]">
                                                     This tool is not scientifically validated
