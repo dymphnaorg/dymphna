@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { LuPhone } from "react-icons/lu";
 import { FaRegEnvelope } from "react-icons/fa";
 import contactimg from "../assets/Rectangle19(3).png"
@@ -9,6 +9,72 @@ import { FaCircle } from "react-icons/fa";
 
 
 function ContactUs() {
+
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    // For first/last name → only letters and spaces
+    if ((name === "firstName" || name === "lastName") && !/^[A-Za-z\s]*$/.test(value)) {
+      return;
+    }
+
+    // For phone → only digits
+    if (name === "phone" && !/^[0-9]*$/.test(value)) {
+      return;
+    }
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const validate = () => {
+    const newErrors = {};
+
+    if (!formData.firstName.trim()) {
+      newErrors.firstName = "First name is required";
+    }
+
+    if (!formData.lastName.trim()) {
+      newErrors.lastName = "Last name is required";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required";
+    } else if (!/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = "Please enter a valid 10-digit phone number";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      console.log("Form submitted:", formData);
+      // reset form if needed
+    }
+  };
+
+
+
   return (
     <div className='dm-sans' >
       <section className="bg-[#343434] text-white ">
@@ -56,46 +122,77 @@ function ContactUs() {
               </h1>
               <p className='text-[12px] md:text-[17px] lg:text-[20px]' >Your thoughts, questions, or feedback help us grow. Whether it’s a suggestion, concern, or just a hello
                 we’re here to listen.</p>
-              <form className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-5">
+              <form
+                className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-5"
+                onSubmit={handleSubmit}
+              >
+                {/* First Name */}
                 <div>
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="   First name*"
-                      className="w-full bg-transparent border-0 border-b border-gray-400 focus:border-green-500 outline-none py-3 rounded-b-xl placeholder-gray-400"
-                    />
-                  </div>
-                </div>
-
-                <div>
-
                   <input
                     type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    placeholder="   First name*"
+                    className="w-full bg-transparent border-0 border-b border-white focus:border-green-500 outline-none py-3 rounded-b-xl placeholder-white"
+                  />
+                  {errors.firstName && (
+                    <p className="text-red-500 text-sm">{errors.firstName}</p>
+                  )}
+                </div>
+
+                {/* Last Name */}
+                <div>
+                  <input
+                    type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
                     placeholder="   Last name*"
-                    className="w-full bg-transparent border-0 border-b border-gray-400 focus:border-green-500 outline-none py-3 rounded-b-xl placeholder-gray-400"
+                    className="w-full bg-transparent border-0 border-b border-white focus:border-green-500 outline-none py-3 rounded-b-xl placeholder-white"
                   />
+                  {errors.lastName && (
+                    <p className="text-red-500 text-sm">{errors.lastName}</p>
+                  )}
                 </div>
-                <div>
 
+                {/* Email */}
+                <div>
                   <input
-                    type="text"
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="   Email ID*"
-                    className="w-full bg-transparent border-0 border-b border-gray-400 focus:border-green-500 outline-none py-3 rounded-b-xl placeholder-gray-400"
+                    className="w-full bg-transparent border-0 border-b border-white focus:border-green-500 outline-none py-3 rounded-b-xl placeholder-white"
                   />
+                  {errors.email && (
+                    <p className="text-red-500 text-sm">{errors.email}</p>
+                  )}
                 </div>
 
+                {/* Phone */}
                 <div>
-
                   <input
-                    type="text"
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
                     placeholder="   Phone*"
-                    className="w-full bg-transparent border-0 border-b border-gray-400 focus:border-green-500 outline-none py-3 rounded-b-xl placeholder-gray-400"
+                    className="w-full bg-transparent border-0 border-b border-white focus:border-green-500 outline-none py-3 rounded-b-xl placeholder-white"
                   />
+                  {errors.phone && (
+                    <p className="text-red-500 text-sm">{errors.phone}</p>
+                  )}
                 </div>
 
+                {/* Submit */}
                 <div className="md:col-span-2">
-                  <button className="w-full max-w-[160px] h-[36px] sm:h-[45px] border-2 border-black bg-[#80BD48] text-black rounded-lg font-medium flex justify-center items-center px-1 hover:bg-white duration-300">
-                    Submit<span className='pl-1'><LuArrowUpRight /></span>
+                  <button
+                    type="submit"
+                    className="w-full max-w-[140px] h-[36px] sm:h-[45px] border-2 border-black bg-[#80BD48] text-black rounded-lg font-medium flex justify-center items-center px-1 hover:bg-white duration-300"
+                  >
+                    Submit <span className="pl-1"><LuArrowUpRight /></span>
                   </button>
                 </div>
               </form>
@@ -105,9 +202,9 @@ function ContactUs() {
 
 
 
-        {/*  Visible only on small screens  */}     
+        {/*  Visible only on small screens  */}
 
-      <div className="p-10 pt-30 pb-20 block md:hidden relative">
+        <div className="p-10 pt-30 pb-20 block md:hidden relative">
           {/* Green BG Image — Behind Content */}
           <img
             src={contactimg2} // replace with actual import
@@ -136,34 +233,69 @@ function ContactUs() {
 
             {/* Inputs */}
             <div className="w-full flex flex-col gap-4">
-              <div className='w-full max-w-[450px] mx-auto'>
-                <input
-                  type="text"
-                  placeholder="   First name*"
-                  className="w-full bg-transparent border-0 border-b border-gray-400 focus:border-green-500 outline-none py-3 rounded-b-xl placeholder-gray-400"
-                />
-              </div>
-              <div className='w-full max-w-[450px] mx-auto'>
-                <input
-                  type="text"
-                  placeholder="   Last name*"
-                  className="w-full bg-transparent border-0 border-b border-gray-400 focus:border-green-500 outline-none py-3 rounded-b-xl placeholder-gray-400"
-                />
-              </div>
-              <div className='w-full max-w-[450px] mx-auto'>
-                <input
-                  type="text"
-                  placeholder="   Email ID*"
-                  className="w-full bg-transparent border-0 border-b border-gray-400 focus:border-green-500 outline-none py-3 rounded-b-xl placeholder-gray-400"
-                />
-              </div>
-              <div className='w-full max-w-[450px] mx-auto'>
-                <input
-                  type="text"
-                  placeholder="   Phone*"
-                  className="w-full bg-transparent border-0 border-b border-gray-400 focus:border-green-500 outline-none py-3 rounded-b-xl placeholder-gray-400"
-                />
-              </div>
+              <form onSubmit={handleSubmit} className="w-full flex flex-col gap-4">
+                {/* First Name */}
+                <div className="w-full max-w-[300px] mx-auto">
+                  <input
+                    type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    placeholder="   First name*"
+                    className="w-full bg-transparent border-0 border-b border-white focus:border-green-500 outline-none py-3 rounded-b-xl placeholder-white"
+                  />
+                  {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName}</p>}
+                </div>
+
+                {/* Last Name */}
+                <div className="w-full max-w-[300px] mx-auto">
+                  <input
+                    type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    placeholder="   Last name*"
+                    className="w-full bg-transparent border-0 border-b border-white focus:border-green-500 outline-none py-3 rounded-b-xl placeholder-white"
+                  />
+                  {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName}</p>}
+                </div>
+
+                {/* Email */}
+                <div className="w-full max-w-[300px] mx-auto">
+                  <input
+                    type="text"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="   Email ID*"
+                    className="w-full bg-transparent border-0 border-b border-white focus:border-green-500 outline-none py-3 rounded-b-xl placeholder-white"
+                  />
+                  {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+                </div>
+
+                {/* Phone */}
+                <div className="w-full max-w-[300px] mx-auto">
+                  <input
+                    type="text"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="   Phone*"
+                    className="w-full bg-transparent border-0 border-b border-white focus:border-green-500 outline-none py-3 rounded-b-xl placeholder-white"
+                  />
+                  {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
+                </div>
+
+                {/* Submit */}
+                <div className="w-full max-w-[300px] mx-auto">
+                  <button
+                    type="submit"
+                    className="w-full border-black border-2 bg-[#80BD48] text-black  py-2 rounded-lg hover:bg-white duration-300"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
 

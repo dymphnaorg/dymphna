@@ -126,7 +126,7 @@ function AboutUs() {
                         <div className='hidden md:flex w-full p-8' >
                             <div className='w-[40%]' >
                                 <h1 className='text-[12px] md:text-[16px] lg:text-[20px] text-white' style={{ fontWeight: "700" }} >Impact and Expansion</h1>
-                                <p className='text-[#696969] text-[12px] md:text-[16px] lg:text-[16px]' >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab tempore harum dignissimos officiis autem quos! Temporibus similique illo rem quidem quasi optio eos id, saepe animi eligendi debitis vel placeat!</p>
+                                <p className='text-[#696969] text-[12px] md:text-[16px] lg:text-[16px]' >Through relentless determination and hard work, Dymphna flourished, expanding its services to two additional branches. Our collaborative efforts with other healthcare professionals enabled us to:</p>
                             </div>
                             <div className='w-[60%]' ></div>
                         </div>
@@ -134,7 +134,7 @@ function AboutUs() {
                         <div className='flex md:hidden w-full p-8' >
                             <div className='w-[70%]' >
                                 <h1 className='text-[12px] md:text-[16px] lg:text-[20px] text-white' style={{ fontWeight: "700" }} >Impact and Expansion</h1>
-                                <p className='text-[#696969] text-[12px] md:text-[16px] lg:text-[16px]' >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab tempore harum dignissimos officiis autem quos! Temporibus similique illo rem quidem quasi optio eos id, saepe animi eligendi debitis vel placeat!</p>
+                                <p className='text-[#696969] text-[12px] md:text-[16px] lg:text-[16px]' >Through relentless determination and hard work, Dymphna flourished, expanding its services to two additional branches. Our collaborative efforts with other healthcare professionals enabled us to:</p>
                             </div>
                             <div className='w-[30%]' ></div>
                         </div>

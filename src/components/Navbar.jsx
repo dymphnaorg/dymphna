@@ -3,7 +3,7 @@ import DymphnaLogoImg from '../assets/dymphna.png'
 import { HiMiniBars3BottomRight } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
 import { LuArrowUpRight } from "react-icons/lu";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import '../styles/element.css'
 import navbar from '../assets/navbar.png'
 import navbarsmall from '../assets/navbarsmall.png'
@@ -12,7 +12,7 @@ import navbarsmall from '../assets/navbarsmall.png'
 
 function Navbar() {
 
-
+    const location = useLocation();
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleSidebar = () => {
         setShowSidebar(!showSidebar);
@@ -108,9 +108,28 @@ function Navbar() {
                                 className="w-[50px] sm:w-[65px] h-auto"
                             />
                             <ul className="flex gap-15 text-black">
-                                <Link className="hover:underline hover:underline-offset-4 hover:decoration-black transition-all" to="/"><li className="cursor-pointer">Home</li></Link>
-                                <Link className="hover:underline hover:underline-offset-4 hover:decoration-black transition-all" to="/aboutUs"><li className="cursor-pointer">About us</li></Link>
-                                <Link className="hover:underline hover:underline-offset-4 hover:decoration-black transition-all" to="/services"><li className="cursor-pointer">Services</li></Link>
+                                <Link
+                                    to="/"
+                                    className={`transition-all ${location.pathname === "/" ? "underline underline-offset-4 decoration-black" : ""
+                                        }`}
+                                >
+                                    <li className="cursor-pointer">Home</li>
+                                </Link>
+                                <Link
+                                    to="/aboutUs"
+                                    className={`transition-all ${location.pathname === "/aboutUs" ? "underline underline-offset-4 decoration-black" : ""
+                                        }`}
+                                >
+                                    <li className="cursor-pointer">About Us</li>
+                                </Link>
+                                <Link
+                                    to="/services"
+                                    className={`transition-all ${location.pathname === "/services" ? "underline underline-offset-4 decoration-black" : ""
+                                        }`}
+                                >
+                                    <li className="cursor-pointer">Services</li>
+                                </Link>
+                                
                             </ul>
                         </div>
                         <div className="hidden sm:flex pr-2 w-[13%] justify-end">

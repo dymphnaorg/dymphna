@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FaArrowLeft, FaArrowRight, FaCircle } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+import { IoIosWarning } from "react-icons/io";
 
 function HomStressCalculator() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -173,21 +174,24 @@ function HomStressCalculator() {
 
 
                             {/* Recommendations */}
-                            <div className="mt-10 w-full  space-y-4 px-10">
-                                <p className="text-md font-semibold text-center">Recommended for You!</p>
-                                <p className="text-center text-sm text-gray-600">
-                                    Based on your result, we suggest exploring the following stress-relief options
-                                </p>
+                            <div className="mt-10 w-full  space-y-5 px-10">
+                                <div className='flex flex-col items-start gap-2' >
+                                    <p className="text-md font-semibold text-center">Recommended for You!</p>
+                                    <p className="text-center text-sm text-[#343434]">
+                                        Based on your result, we suggest exploring the following stress-relief options
+                                    </p>
+                                </div>
+
 
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-                                    <div className="bg-[#ECFCD7] p-4 rounded-xl shadow-sm">
+                                    <div className="border-[1px] border-[#BBD74F] bg-[#BBD74F5C] p-4 rounded-xl shadow-sm">
                                         <p className="font-semibold">Psychotherapy & Counseling</p>
                                         <p className="text-sm text-gray-700 mt-1">
                                             Work with a licensed therapist to uncover stress triggers, build coping skills,
                                             and boost emotional resilience.
                                         </p>
                                     </div>
-                                    <div className="bg-[#ECFCD7] p-4 rounded-xl shadow-sm">
+                                    <div className="border-[1px] border-[#BBD74F] bg-[#BBD74F5C] p-4 rounded-xl shadow-sm">
                                         <p className="font-semibold">Psychodiagnostics</p>
                                         <p className="text-sm text-gray-700 mt-1">
                                             Gain clarity on your emotional and cognitive patterns through personalized psychological assessments.
@@ -206,96 +210,109 @@ function HomStressCalculator() {
                     )
                     :
                     (
-                        <div className="w-full px-4 py-6 flex flex-col gap-5">
-                            {/* Warning */}
-                            <div className="flex flex-col items-center pt-2 text-center">
-                                <span className="text-[#FF9800] text-[14px] md:text-[15px]">
-                                    ⚠ This tool is not scientifically validated
-                                </span>
-                            </div>
 
-                            {/* Question */}
-                            <div className='flex flex-col items-center w-full' >
+                        <div className='w-[90%]' >
+                            <div className="px-4 py-2 flex flex-col gap-1">
+                                <div>
+                                    {/* Warning */}
+                                    <div className="flex flex-col items-end pt-2 ">
+                                        <div className='flex gap-2 items-center ' >
+                                            <IoIosWarning className='text-[#FE8401]' />
+                                            <span className="text-[#343434] text-[14px] md:text-[15px]">
+                                                This tool is not scientifically validated
+                                            </span>
+                                        </div>
 
-                                <div className="w-full max-w-[500px] mx-auto flex flex-col items-center px-4">
-
-                                    {/* Progress Step Counter */}
-                                    <p className="text-sm text-gray-600 self-start mb-1">
-                                        Step {currentIndex + 1} of {questions.length}
-                                    </p>
-
-                                    {/* Progress Bar */}
-                                    <div className="w-full h-2 bg-gray-300 rounded-full overflow-hidden mb-6">
-                                        <div
-                                            className="h-full bg-[#80BD48] transition-all duration-500"
-                                            style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
-                                        ></div>
                                     </div>
 
-                                    {/* Question Text */}
-                                    <h2 className="text-center text-[20px] md:text-[24px] font-semibold mb-6">
-                                        {currentQ.question}
-                                    </h2>
+                                    <div>
+                                        {/* Progress Step Counter */}
+                                        <p className="text-sm text-gray-600 self-start mb-1">
+                                            Step {currentIndex + 1} of {questions.length}
+                                        </p>
 
-                                    {/* Options */}
-                                    <div className="space-y-5 w-full sm:w-[70%]">
-                                        {currentQ.options.map((opt, i) => (
-                                            <label
-                                                key={i}
-                                                className="flex justify-between items-center border rounded-md px-4 py-3 bg-[#F3F9DC] hover:bg-[#E3EDC9] cursor-pointer w-full text-sm sm:text-base transition"
-                                            >
-                                                <div className="flex gap-4 items-center">
-                                                    <input
-                                                        type="radio"
-                                                        name={currentQ.name}
-                                                        checked={answers[currentQ.name]?.label === opt.label}
-                                                        onChange={() => handleSelect(opt)}
-                                                        className="accent-black w-4 h-4"
-                                                    />
-                                                    <div className='flex flex-col justify-start' >
-                                                        <span className="font-medium">{opt.label}</span>
-                                                        {opt.sub && <span className="text-gray-600 text-sm">{opt.sub}</span>}
+                                        {/* Progress Bar */}
+                                        <div className="w-full h-2 bg-gray-300 rounded-full overflow-hidden mb-6">
+                                            <div
+                                                className="h-full bg-gradient-to-b from-[#FFB00A] to-[#FE8401] transition-all duration-500"
+                                                style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
+                                            ></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                {/* Question */}
+                                <div className='flex flex-col items-center w-full' >
+
+                                    <div className="w-full max-w-[500px] mx-auto flex flex-col items-center px-4">
+
+                                        {/* Question Text */}
+                                        <h2 className="text-center text-[20px] md:text-[24px] font-semibold mb-6">
+                                            {currentQ.question}
+                                        </h2>
+
+                                        {/* Options */}
+                                        <div className="space-y-3 w-full sm:w-[70%]">
+                                            {currentQ.options.map((opt, i) => (
+                                                <label
+                                                    key={i}
+                                                    className="flex justify-between items-center border-[1px] border-[#BBD74F] bg-[#BBD74F5C] rounded-md px-4 py-3  hover:bg-[#E3EDC9] cursor-pointer w-full text-sm sm:text-base transition"
+                                                >
+                                                    <div className="flex gap-4 items-center">
+                                                        <input
+                                                            type="radio"
+                                                            name={currentQ.name}
+                                                            checked={answers[currentQ.name]?.label === opt.label}
+                                                            onChange={() => handleSelect(opt)}
+                                                            className="accent-black w-4 h-4"
+                                                        />
+                                                        <div className='flex flex-col justify-start' >
+                                                            <span className="font-medium">{opt.label}</span>
+                                                            {opt.sub && <span className="text-gray-600 text-sm">{opt.sub}</span>}
+                                                        </div>
+
                                                     </div>
 
-                                                </div>
+                                                </label>
+                                            ))}
+                                        </div>
 
-                                            </label>
-                                        ))}
-                                    </div>
-
-                                    {/* Buttons */}
-                                    <div className="flex justify-between items-center mt-10 flex-col sm:flex-row gap-4 w-full">
-                                        <button
-                                            disabled={currentIndex === 0}
-                                            onClick={() => setCurrentIndex((prev) => prev - 1)}
-                                            className="border border-black px-6 py-2 rounded-md flex items-center gap-2 hover:bg-gray-100 transition w-full sm:w-auto justify-center disabled:opacity-50 text-black"
-                                        >
-                                            <FaArrowLeft />
-                                            Back
-                                        </button>
-
-                                        {currentIndex < questions.length - 1 ? (
+                                        {/* Buttons */}
+                                        <div className="flex justify-between items-center mt-5 flex-col sm:flex-row gap-4 w-full">
                                             <button
-                                                onClick={handleNext}
-                                                disabled={!answers[currentQ.name]}
-                                                className="bg-[#80BD48] text-black px-6 py-2 rounded-md flex items-center gap-2 hover:bg-white border border-black transition w-full sm:w-auto justify-center"
+                                                disabled={currentIndex === 0}
+                                                onClick={() => setCurrentIndex((prev) => prev - 1)}
+                                                className="border border-black px-5 py-1 rounded-[6px] flex items-center gap-2 hover:bg-gray-100 transition w-full sm:w-auto justify-center disabled:opacity-50 text-black"
                                             >
-                                                Next
-                                                <FaArrowRight />
+                                                <FaArrowLeft />
+                                                Back
                                             </button>
-                                        ) : (
-                                            <button
-                                                onClick={() => setSubmitted(true)}
-                                                className="bg-[#80BD48] text-black px-6 py-2 rounded-md flex items-center gap-2 hover:bg-white border border-black transition w-full sm:w-auto justify-center"
-                                            >
-                                                Submit
-                                            </button>
-                                        )}
+
+                                            {currentIndex < questions.length - 1 ? (
+                                                <button
+                                                    onClick={handleNext}
+                                                    disabled={!answers[currentQ.name]}
+                                                    className="bg-[#80BD48] text-black px-5 py-1 rounded-[6px] flex items-center gap-2 hover:bg-white border border-black transition w-full sm:w-auto justify-center"
+                                                >
+                                                    Next
+                                                    <FaArrowRight />
+                                                </button>
+                                            ) : (
+                                                <button
+                                                    onClick={() => setSubmitted(true)}
+                                                    className="bg-[#80BD48] text-black px-5 py-1 rounded-[6px] flex items-center gap-2 hover:bg-white border border-black transition w-full sm:w-auto justify-center"
+                                                >
+                                                    Submit
+                                                </button>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
+
                     )
             }
         </div>

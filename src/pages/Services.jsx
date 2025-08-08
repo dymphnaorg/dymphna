@@ -14,7 +14,7 @@ import { GoArrowDownRight } from "react-icons/go";
 
 function Services() {
     return (
-        <div className=' px-5 sm:px-10 w-full dm-sans pb-20' >
+        <div className=' px-5 sm:px-10 w-full dm-sans pb-10' >
             <div className='w-full h-[180px] md:h-[260px] bg-[#343434] border-[#4C4C4C] border-[12px] rounded-3xl ' >
                 <div className='flex items-center gap-3 md:gap-4 pt-[100px] md:pt-[140px] pl-8' >
                     <FaCircle className="text-[#80BD48] md-w-6 md-h-6 w-4 h-4  " />
@@ -44,7 +44,6 @@ function Services() {
                         </div>
                         <div>
                         </div>
-
 
                         <div className="relative w-[80%] lg:w-[30%] h-auto group">
                             {/* Default image for small screens (dark) */}
@@ -76,13 +75,11 @@ function Services() {
                             />
                         </div>
 
-
-
                         {/* RIGHT BULLET SECTION */}
                         <div className='w-full lg:w-[30%]'>
                             <h1 className='text-[12px] md:text-[17px] lg:text-[20px]' style={{ fontWeight: "500" }}>Includes various approaches:</h1>
 
-                            <div className="pt-5 text-[#5B5B5B] flex flex-col gap-2 sm-gap-4" style={{ fontWeight: "500" }}>
+                            <div className="pt-5 text-[#5B5B5B] flex flex-col gap-2 sm:gap-4" style={{ fontWeight: "500" }}>
                                 <div className="flex items-start gap-2">
                                     <span className="w-[11px] h-[11px] mt-1 rounded-full bg-[#AEAEAE] shrink-0"></span>
                                     <p className="text-[10px] md:text-[14px] lg:text-[15px]">
@@ -163,7 +160,7 @@ function Services() {
                         <div className='w-full lg:w-[30%]'>
                             <h1 className='text-[12px] md:text-[17px] lg:text-[20px]' style={{ fontWeight: "500" }}>Evaluates:</h1>
 
-                            <div className="pt-5 flex flex-col gap-2 sm-gap-4 text-[#5B5B5B]" style={{ fontWeight: "500" }}>
+                            <div className="pt-5 flex flex-col gap-2 sm:gap-4 text-[#5B5B5B]" style={{ fontWeight: "500" }}>
                                 <div className="flex items-start gap-2">
                                     <span className="w-[11px] h-[11px] mt-1 rounded-full bg-[#AEAEAE] shrink-0"></span>
                                     <p className="text-[10px] md:text-[14px] lg:text-[15px]">
@@ -202,9 +199,6 @@ function Services() {
                             </p>
                         </div>
 
-
-
-
                         <div className="relative w-[80%] lg:w-[30%] h-auto group">
                             {/* Default image for small screens (dark) */}
                             <img
@@ -240,7 +234,7 @@ function Services() {
                         <div className='w-full lg:w-[30%]'>
                             <h1 className='text-[12px] md:text-[17px] lg:text-[20px]' style={{ fontWeight: "500" }}>Key Points:</h1>
 
-                            <div className="pt-5 flex flex-col gap-2 sm-gap-4 text-[#5B5B5B]" style={{ fontWeight: "500" }}>
+                            <div className="pt-5 flex flex-col gap-2 sm:gap-4 text-[#5B5B5B]" style={{ fontWeight: "500" }}>
                                 <div className="flex items-start gap-2">
                                     <span className="w-[11px] h-[11px] mt-1 rounded-full bg-[#AEAEAE] shrink-0"></span>
                                     <p className="text-[10px] md:text-[14px] lg:text-[15px]">
@@ -326,7 +320,7 @@ function Services() {
                         <div className='w-full lg:w-[30%]'>
                             <h1 className='text-[12px] md:text-[17px] lg:text-[20px]' style={{ fontWeight: "500" }}>Involves a systematic approach:</h1>
 
-                            <div className="pt-5 flex flex-col gap-2 sm-gap-4 text-[#5B5B5B]" style={{ fontWeight: "500" }}>
+                            <div className="pt-5 flex flex-col gap-2 sm:gap-4 text-[#5B5B5B]" style={{ fontWeight: "500" }}>
                                 <div className="flex items-start gap-2">
                                     <span className="w-[11px] h-[11px] mt-1 rounded-full bg-[#AEAEAE] shrink-0"></span>
                                     <p className="text-[10px] md:text-[14px] lg:text-[15px]">
@@ -364,7 +358,7 @@ function Services() {
                         </div>
                     </div>
                     <div id='otherServices' className='flex flex-col gap-6 lg:pt-10'>
-                        <h1 className='text-lg lg:text-2xl font-medium' style={{ fontWeight: "500" }}>Other Services</h1>
+                        <h1 className='text-[18px] md:text-[18px] lg:text-[28px]' style={{ fontWeight: "500" }}>Other Services</h1>
                         <hr className="w-full border-t border-[#5B5B5B]" />
 
                         <div className='flex flex-col gap-8'>
@@ -385,16 +379,16 @@ function Services() {
 
                         <hr className="w-full border-t border-[#5B5B5B]" />
 
-                        <div className='flex flex-col lg:flex-row gap-5 lg:gap-20'>
+                        <div className='flex flex-col lg:flex-row gap-5 items-center lg:gap-20'>
                             <div className='max-w-[900px]'>
-                                <p className='text-xs md:text-sm lg:text-base text-[#5B5B5B]'>
+                                <p className='text-xs md:text-sm lg:text-base  text-[#343434]' style={{ fontWeight: "500" }} >
                                     Students can have a unique and enriching experience by interning at a property that houses schools and an elderly home with 300 beds. An internship programme offers the chance to work closely with interns at a 300-bed old age home and school. This gives interns the chance to pick the brains of industry professionals and acquire important knowledge and insights that will help them succeed in their future employment.
                                 </p>
                             </div>
                             <div className='flex flex-col gap-5 min-w-[300px]'>
                                 <div className='flex gap-2 items-center'>
                                     <FaCircle className="text-[#6D6D6D] w-[11px] md:w-[15px] h-[11px] md:h-[15px]" />
-                                    <h1 className='text-sm md:text-lg lg:text-xl font-medium'>Sports psychology</h1>
+                                    <h1 className='text-sm md:text-lg lg:text-xl font-medium'>Online internship also available</h1>
                                 </div>
                                 <div className='flex flex-col gap-4 pl-5'>
                                     <h1 className='text-sm md:text-lg lg:text-xl font-medium'>*Research</h1>
@@ -404,6 +398,8 @@ function Services() {
                             </div>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>
