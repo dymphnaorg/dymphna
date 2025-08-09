@@ -3,5 +3,5 @@ import { commonApi } from "./CommonApi";
 
 
 export const sendContactMessageApi = async (reqBody) => {
-    return await commonApi("post", `${BASE_URL}/dymphna/contact_us`, reqBody, "")
+    return await commonApi("post", `${BASE_URL}/contact_us`, reqBody, "")
 }
