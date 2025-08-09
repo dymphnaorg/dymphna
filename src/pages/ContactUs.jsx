@@ -58,20 +58,17 @@ function ContactUs() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (!validate()) return;
-
     setIsSubmitting(true);
-
-
     const payload = {
       fullName: formData.firstName + " " + formData.lastName,
       email: formData.email,
       phoneNumber: formData.phone,
-      message: "Contact form submission"
+     
     };
 
     try {
+      console.log( "payloaddddd", payload);
       const result = await sendContactMessageApi(payload);
 
       if (result.status === 200) {
@@ -87,6 +84,8 @@ function ContactUs() {
     } finally {
       setIsSubmitting(false);
     }
+   
+    
   };
 
   return (
