@@ -260,3 +260,47 @@
 
 
     }
+
+.fluid-fill {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  color: white;
+ z-index: 1;
+  animation: borderFade 2s ease forwards;
+}
+
+.fluid-fill::before {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #80BD48;
+  animation: fillUp 2s ease forwards;
+  z-index: -1;
+   
+}
+
+.fluid-fill::after{
+  border: none;
+}
+
+@keyframes fillUp {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes borderFade {
+  from {
+    border-color: white;
+  }
+  to {
+    border-color: transparent;
+  }
+}

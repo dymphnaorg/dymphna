@@ -8,6 +8,8 @@ import HomeGeroPsycology from '../HomeComponents/HomeGeroPsycology';
 import HomeBenefitSection from '../HomeComponents/HomeBenefitSection';
 import { useNavigate } from 'react-router-dom';
 import HomStressCalculator from '../HomeComponents/HomStressCalculator';
+import '../styles/element.css'
+
 
 function Home() {
   const [showPopup, setShowPopup] = useState(false);
@@ -36,9 +38,30 @@ function Home() {
           Because Every Mind Matters <br /> Bringing Mental Health to Every Corner.
         </h1>
 
-        {/* Image */}
         <div className="w-full mt-6 flex justify-center">
-          <img className="w-full max-w-[90%]" src={homeIntroImg} alt="Intro" />
+          <div className="relative w-full max-w-[90%]">
+            {/* Image */}
+            <img
+              className="w-full"
+              src={homeIntroImg}
+              alt="Intro"
+            />
+
+            {/* Overlay text container */}
+            <div className="absolute bottom-6 left-1/2 w-full transform -translate-x-1/2 flex gap-2 px-3">
+              <div className='flex-col' >
+                <span className="fluid-fill   px-7 py-2 border-1 border-white text-white rounded-full text-[11px] font-medium">Resilience</span>
+                <div className='flex gap-1' >
+                  <span className=" fluid-fill  px-7 py-2 border-1 border-white text-white rounded-full text-[11px] md:text-[11px] font-medium">Trust</span>
+                  <span className="fluid-fill   px-7 py-2 border-1 border-white text-white rounded-full text-[11px] font-medium">Understanding</span>
+                </div>
+              </div>
+
+
+
+
+            </div>
+          </div>
         </div>
 
         {/* Buttons */}
@@ -55,13 +78,15 @@ function Home() {
         </div>
 
       </div>
+      <div className="hidden md:flex md:pt-10 lg:pt-0 md:flex-row items-stretch justify-between px-10">
 
-
-      <div className="hidden md:flex md:pt-10 lg:pt-0 flex-col md:flex-row items-center justify-between px-10">
         {/* left text section */}
-        <div className="flex flex-col md:w-[45%] justify-between min-h-[80vh]">
+        <div className="flex flex-col md:w-[45%] justify-between">
           <div></div>
-          <h1 className="text-[50px] quicksand font-bold md:text-[40px] ">Because Every Mind Matters  Bringing Mental Health to Every Corner.</h1>
+          <div className='max-w-[450px]' >
+            <h1 className="text-[54px] quicksand font-bold md:text-[40px] ">Because Every Mind Matters  Bringing Mental Health to Every Corner.</h1>
+          </div>
+
           <div className='flex items-center gap-3' >
             <button onClick={serviceNavigation} className="w-full max-w-[200px]  h-[36px] sm:h-[45px] border-2 border-black bg-[#80BD48]  text-black rounded-lg text-[13px] lg:text-base lg:font-medium
 
@@ -75,13 +100,20 @@ function Home() {
             </button>
           </div>
         </div>
+
+
         {/* right image section */}
-        <div className="md:w-[50%] flex justify-center">
-          <img className="w-[100%]" src={homeIntroImg} alt="Intro" />
+        <div className="md:w-[50%] w-full flex justify-center relative">
+          <div className='"relative w-full max-w-[90%]"' >
+            <img className="w-[100%]" src={homeIntroImg} alt="Intro" />
+          </div>
+          <div className="absolute bottom-[5%] left-1/2 w-full transform -translate-x-1/2 flex gap-1  flex-wrap pl-5 justify-start">
+            <span className=" fluid-fill   px-[2vw] py-[0.5vw] border-1 border-white text-white rounded-full md:text-[15px] text-lg font-medium">Resilience</span>
+            <span className="fluid-fill   px-[2vw] py-[0.5vw] border-1 border-white text-white rounded-full md:text-[15px] text-lg font-medium">Trust</span>
+            <span className="fluid-fill   px-[2vw] py-[0.5vw] border-1 border-white text-white rounded-full md:text-[15px] text-lg  font-medium">Understanding</span>
+          </div>
         </div>
       </div>
-
-
       <div className='hidden md:flex  pt-35 px-10 pb-20 gap-4' >
         <div className='w-[50%]' >
           <img src={homeImg2} alt="" />
@@ -118,7 +150,6 @@ flex justify-center items-center px-1 hover:bg-white duration-300">
       <HomeServiceSection />
       <HomeAdministration />
       <HomeGeroPsycology />
-
       <HomeBenefitSection />
 
     </div>

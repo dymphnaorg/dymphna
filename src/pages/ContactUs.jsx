@@ -1,15 +1,12 @@
 import React, { useState } from 'react'
 import { LuPhone } from "react-icons/lu";
-import { FaRegEnvelope } from "react-icons/fa";
+import { FaRegEnvelope, FaCircle } from "react-icons/fa";
+import { LuArrowUpRight } from "react-icons/lu";
 import contactimg from "../assets/Rectangle19(3).png"
 import contactimg2 from "../assets/Rectangle19(2).png"
-import { LuArrowUpRight } from "react-icons/lu";
-import { FaCircle } from "react-icons/fa";
-
-
+import { sendContactMessageApi } from '../services/allApi';
 
 function ContactUs() {
-
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -18,16 +15,15 @@ function ContactUs() {
   });
 
   const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    // For first/last name → only letters and spaces
     if ((name === "firstName" || name === "lastName") && !/^[A-Za-z\s]*$/.test(value)) {
       return;
     }
 
-    // For phone → only digits
     if (name === "phone" && !/^[0-9]*$/.test(value)) {
       return;
     }
@@ -41,13 +37,8 @@ function ContactUs() {
   const validate = () => {
     const newErrors = {};
 
-    if (!formData.firstName.trim()) {
-      newErrors.firstName = "First name is required";
-    }
-
-    if (!formData.lastName.trim()) {
-      newErrors.lastName = "Last name is required";
-    }
+    if (!formData.firstName.trim()) newErrors.firstName = "First name is required";
+    if (!formData.lastName.trim()) newErrors.lastName = "Last name is required";
 
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
@@ -65,15 +56,38 @@ function ContactUs() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validate()) {
-      console.log("Form submitted:", formData);
-      // reset form if needed
+
+    if (!validate()) return;
+
+    setIsSubmitting(true);
+
+
+    const payload = {
+      fullName: formData.firstName + " " + formData.lastName,
+      email: formData.email,
+      phoneNumber: formData.phone,
+      message: "Contact form submission"
+    };
+
+    try {
+      const result = await sendContactMessageApi(payload);
+
+      if (result.status === 200) {
+        alert("Thanks for reaching out! We'll get back to you soon.");
+        setFormData({ firstName: "", lastName: "", email: "", phone: "" });
+        setErrors({});
+      } else {
+        alert("Message sending failed. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
-
-
 
   return (
     <div className='dm-sans' >
@@ -125,6 +139,8 @@ function ContactUs() {
               <form
                 className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-5"
                 onSubmit={handleSubmit}
+
+
               >
                 {/* First Name */}
                 <div>
@@ -189,6 +205,8 @@ function ContactUs() {
                 {/* Submit */}
                 <div className="md:col-span-2">
                   <button
+
+                    disabled={isSubmitting}
                     type="submit"
                     className="w-full max-w-[140px] h-[36px] sm:h-[45px] border-2 border-black bg-[#80BD48] text-black rounded-lg font-medium flex justify-center items-center px-1 hover:bg-white duration-300"
                   >
@@ -202,12 +220,11 @@ function ContactUs() {
 
 
 
-        {/*  Visible only on small screens  */}
 
         <div className="p-10 pt-30 pb-20 block md:hidden relative">
-          {/* Green BG Image — Behind Content */}
+
           <img
-            src={contactimg2} // replace with actual import
+            src={contactimg2}
             alt=""
             className="absolute top-[590px] left-[-30px] w-[100px]  z-0"
           />
@@ -289,6 +306,8 @@ function ContactUs() {
                 {/* Submit */}
                 <div className="w-full max-w-[300px] mx-auto">
                   <button
+
+                    disabled={isSubmitting}
                     type="submit"
                     className="w-full border-black border-2 bg-[#80BD48] text-black  py-2 rounded-lg hover:bg-white duration-300"
                   >
@@ -320,9 +339,6 @@ function ContactUs() {
             </div>
           </div>
         </div>
-
-
-
 
       </section>
 

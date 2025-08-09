@@ -115,7 +115,7 @@ function HomStressCalculator() {
     return (
 
 
-        <div className="bg-white rounded-3xl flex flex-col items-center h-auto w-[95%] max-w-[750px] shadow-md mx-auto ">
+        <div className="bg-white rounded-3xl flex flex-col items-center h-auto w-[95%] max-w-[750px] shadow-md mx-auto  ">
             {/* Header */}
             <div className="h-[80px] sm:h-[100px] w-[90%] bg-[#80BD48] rounded-b-3xl">
                 <div className="sm:pt-[27px] pt-[17px]  pl-6">
@@ -128,14 +128,14 @@ function HomStressCalculator() {
                             Stress Calculator
                         </h1>
                     </div>
-                    <p className="text-[14px]">A rough estimate of your current stress</p>
+                    <p className="text-[11px] sm:text-[14px]">A rough estimate of your current stress</p>
                 </div>
             </div>
-            <div className='sm:pb-10 pb-5 w-full flex justify-center' >
+            <div className='sm:pb-7 pb-2 w-full flex justify-center' >
                 {
                     submitted ?
                         (
-                            <div className="w-full py-10 flex flex-col items-center justify-center">
+                            <div className="w-full py-5 sm:py-10 flex flex-col items-center justify-center">
                                 {/* Stress level text */}
                                 <p className="text-center text-lg font-semibold mb-4">
                                     {stressLevel}
@@ -174,33 +174,33 @@ function HomStressCalculator() {
 
 
                                 {/* Recommendations */}
-                                <div className="mt-10 w-full  space-y-5 px-10">
-                                    <div className='flex flex-col items-start gap-2' >
-                                        <p className="text-md font-semibold text-center">Recommended for You!</p>
-                                        <p className="text-center text-sm text-[#343434]">
+                                <div className=" mt-5 sm:mt-10 w-full space-y-0  sm:space-y-5 px-10">
+                                    <div className='flex flex-col items-start gap-1 sm:gap-2' >
+                                        <p className=" text-sm sm:text-md font-semibold text-center">Recommended for You!</p>
+                                        <p className=" text-left sm:text-center text-[12px] sm:text-sm text-[#343434]">
                                             Based on your result, we suggest exploring the following stress-relief options
                                         </p>
                                     </div>
 
 
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2 sm:mt-4">
                                         <div className="border-[1px] border-[#BBD74F] bg-[#BBD74F5C] p-4 rounded-xl shadow-sm">
-                                            <p className="font-semibold">Psychotherapy & Counseling</p>
-                                            <p className="text-sm text-gray-700 mt-1">
+                                            <p className="font-semibold text-sm sm:text-md">Psychotherapy & Counseling</p>
+                                            <p className="text-[12px] sm:text-sm text-gray-700 mt-1">
                                                 Work with a licensed therapist to uncover stress triggers, build coping skills,
                                                 and boost emotional resilience.
                                             </p>
                                         </div>
                                         <div className="border-[1px] border-[#BBD74F] bg-[#BBD74F5C] p-4 rounded-xl shadow-sm">
-                                            <p className="font-semibold">Psychodiagnostics</p>
-                                            <p className="text-sm text-gray-700 mt-1">
+                                            <p className="font-semibold text-sm sm:text-md">Psychodiagnostics</p>
+                                            <p className="text-[12px] sm:text-sm text-gray-700 mt-1">
                                                 Gain clarity on your emotional and cognitive patterns through personalized psychological assessments.
                                             </p>
                                         </div>
                                     </div>
 
                                     <div onClick={serviceNavigation} className="text-center flex justify-center mt-6">
-                                        <button className="text-black font-medium flex items-center justify-center gap-1">
+                                        <button className="text-black text-sm sm:text-md flex items-center justify-center gap-1">
                                             View All Services <span className='pl-2' ><FaArrowRight /></span>
                                         </button>
                                     </div>
