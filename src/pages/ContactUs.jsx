@@ -60,9 +60,10 @@ function ContactUs() {
     if (!validate()) return;
     setIsSubmitting(true);
     const payload = {
-      fullName: formData.firstName + " " + formData.lastName,
+      first_name: formData.firstName ,
+      last_name: formData.lastName,
       email: formData.email,
-      phoneNumber: formData.phone,
+      phone: formData.phone,
      
     };
 
