@@ -9,9 +9,14 @@ import { FaCircle } from "react-icons/fa";
 import aboutImg3 from '../assets/group3.png'
 import aboutImg4 from '../assets/group4.png'
 import aboutImg5 from '../assets/group14.png'
+import aboutImg7 from '../assets/about111.png'
+import aboutImg8 from '../assets/abou112.png'
+import aboutImg9 from '../assets/about113.png'
+
+
 
 function AboutUs() {
-    const slideshowImages = [aboutImg3, aboutImg4, aboutImg5];
+    const slideshowImages = [aboutImg7, aboutImg8, aboutImg9];
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
@@ -57,7 +62,7 @@ function AboutUs() {
             </div>
 
             <div className='sm:pt-20 pt-10' >
-                <h1 className='text-[12px] md:text-[16px] lg:text-[20px]' style={{ fontWeight: "700" }} >Our multifaceted approach included:</h1>
+                <h1 className='text-[12px] md:text-[16px] lg:text-[20px]' style={{ fontWeight: "500" }} >Our multifaceted approach included:</h1>
 
                 <div className='flex flex-col gap-5 w-full' >
                     <div className='flex w-full justify-start' ></div>
@@ -126,7 +131,7 @@ function AboutUs() {
                         <div className='hidden md:flex w-full p-8' >
                             <div className='w-[40%]' >
                                 <h1 className='text-[12px] md:text-[16px] lg:text-[20px] text-white' style={{ fontWeight: "700" }} >Impact and Expansion</h1>
-                                <p className='text-[#696969] text-[12px] md:text-[16px] lg:text-[16px]' >Through relentless determination and hard work, Dymphna flourished, expanding its services to two additional branches. Our collaborative efforts with other healthcare professionals enabled us to:</p>
+                                <p className='text-[#969696] text-[12px] md:text-[16px] lg:text-[16px]' >Through relentless determination and hard work, Dymphna flourished, expanding its services to two additional branches. Our collaborative efforts with other healthcare professionals enabled us to:</p>
                             </div>
                             <div className='w-[60%]' ></div>
                         </div>
@@ -134,7 +139,7 @@ function AboutUs() {
                         <div className='flex md:hidden w-full p-8' >
                             <div className='w-[70%]' >
                                 <h1 className='text-[12px] md:text-[16px] lg:text-[20px] text-white' style={{ fontWeight: "700" }} >Impact and Expansion</h1>
-                                <p className='text-[#696969] text-[12px] md:text-[16px] lg:text-[16px]' >Through relentless determination and hard work, Dymphna flourished, expanding its services to two additional branches. Our collaborative efforts with other healthcare professionals enabled us to:</p>
+                                <p className='text-[#969696] text-[12px] md:text-[16px] lg:text-[16px]' >Through relentless determination and hard work, Dymphna flourished, expanding its services to two additional branches. Our collaborative efforts with other healthcare professionals enabled us to:</p>
                             </div>
                             <div className='w-[30%]' ></div>
                         </div>
@@ -146,14 +151,14 @@ function AboutUs() {
                                 <div className='flex flex-col gap-4 w-[50%]  ' >
                                     <img src={aboutImg2} className='max-w-[85px]' alt="" />
                                     <hr className="w-full border-t border-[#5B5B5B] " />
-                                    <p className='text-left text-[#696969] text-[12px] md:text-[16px] lg:text-[16px]'>
+                                    <p className='text-left text-[#969696] text-[12px] md:text-[16px] lg:text-[16px]'>
                                         Reduce Mental Illness Cases:Our preventive measures and research initiatives led to a significant decline in mental health issues.
                                     </p>
                                 </div>
                                 <div className='flex flex-col gap-4 w-[50%] ' >
                                     <img src={aboutImg2} className='max-w-[85px]' alt="" />
                                     <hr className="w-full border-t border-[#5B5B5B] " />
-                                    <p className='text-left text-[#696969] text-[12px] md:text-[16px] lg:text-[16px]'>
+                                    <p className='text-left text-[#969696] text-[12px] md:text-[16px] lg:text-[16px]'>
                                         Foster a Supportive Environment: Community outreach and engagement efforts helped reduce stigma, promoting mental health awareness and a culture of understanding.
                                     </p>
                                 </div>
@@ -167,14 +172,14 @@ function AboutUs() {
                                 <div className='flex flex-col gap-4 w-full  ' >
                                     <img src={aboutImg2} className='max-w-[39px]' alt="" />
                                     <hr className="w-full border-t border-[#5B5B5B] " />
-                                    <p className='text-left text-[#696969] text-[12px] md:text-[16px] lg:text-[16px]'>
+                                    <p className='text-left text-[#969696] text-[12px] md:text-[16px] lg:text-[16px]'>
                                         Reduce Mental Illness Cases:Our preventive measures and research initiatives led to a significant decline in mental health issues.
                                     </p>
                                 </div>
                                 <div className='flex flex-col gap-4 w-full ' >
                                     <img src={aboutImg2} className='max-w-[39px]' alt="" />
                                     <hr className="w-full border-t border-[#5B5B5B] " />
-                                    <p className='text-left text-[#696969] text-[12px] md:text-[16px] lg:text-[16px]'>
+                                    <p className='text-left text-[#969696] text-[12px] md:text-[16px] lg:text-[16px]'>
                                         Foster a Supportive Environment: Community outreach and engagement efforts helped reduce stigma, promoting mental health awareness and a culture of understanding.
                                     </p>
                                 </div>
@@ -204,7 +209,7 @@ function AboutUs() {
                     </div>
 
                     {/* TEXT BLOCK */}
-                    <div className="w-full sm:w-[70%] flex flex-col justify-between gap-3">
+                    <div className="w-full sm:w-[70%] flex md:h-[320px] lg:h-[440px] flex-col justify-between gap-5">
                         {/* FIRST TEXT - LEFT ALIGN */}
                         <div className="flex justify-start">
                             <p className="max-w-[700px] text-left text-[#696969] text-[12px] md:text-[16px] lg:text-[16px]">

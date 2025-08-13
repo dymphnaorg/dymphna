@@ -15,11 +15,11 @@ function HomeBenefitSection() {
                         <h1 className="text-[12px] sm:text-[24px] font-semibold mb-3">Who Can Benefit?</h1>
                         <div className="flex items-center gap-2 mb-2">
                             <FaCircle className="text-[#80BD48] w-2 h-2 sm:md:w-3 sm:md:h-3 md:w-4 md:h-4 lg:w-4 lg:h-4" />
-                            <p className='text-[11px] sm:text-[19px]'>Psychology Undergraduate Students</p>
+                            <p className='text-[#343434] text-[11px] sm:text-[19px] font-light'>Psychology Undergraduate Students</p>
                         </div>
                         <div className="flex items-center gap-2">
                             <FaCircle className="text-[#80BD48] w-2 h-2 sm:md:w-3 sm:md:h-3 md:w-4 md:h-4 lg:w-4 lg:h-4" />
-                            <p className='text-[11px] sm:text-[19px]'>Psychology Postgraduate Students</p>
+                            <p className='text-[#343434] text-[11px] sm:text-[19px] font-light'>Psychology Postgraduate Students</p>
                         </div>
                     </div>
 
@@ -30,22 +30,22 @@ function HomeBenefitSection() {
                         {/* What You'll Gain - DESKTOP LEFT */}
                         <div className="text-left">
                             <h1 className="text-[19px] sm:text-[24px] font-semibold mb-4">What You’ll Gain</h1>
-                            <ul className="space-y-2 text-gray-800">
+                            <ul className="space-y-2">
                                 <li className="flex items-start gap-2">
                                     <span className="text-black text-[14px] sm:text-lg">✔</span>
-                                    <p className='text-[11px] sm:text-[19px]'>Understanding of geriatric mental health care</p>
+                                    <p className='text-[#343434] text-[11px] sm:text-[19px] font-light'>Understanding of geriatric mental health care</p>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-black text-[14px] sm:text-lg">✔</span>
-                                    <p className='text-[11px] sm:text-[19px]'>Practical counseling skills</p>
+                                    <p className='text-[#343434] text-[11px] sm:text-[19px] font-light'>Practical counseling skills</p>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-black text-[14px] sm:text-lg">✔</span>
-                                    <p className='text-[11px] sm:text-[19px]'>Confidence to handle real-life elderly cases</p>
+                                    <p className='text-[#343434] text-[11px] sm:text-[19px] font-light'>Confidence to handle real-life elderly cases</p>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-black text-[14px] sm:text-lg">✔</span>
-                                    <p className='text-[11px] sm:text-[19px]'>Certification upon successful completion</p>
+                                    <p className='text-[#343434] text-[11px] sm:text-[19px] font-light'>Certification upon successful completion</p>
                                 </li>
                             </ul>
                         </div>
@@ -54,22 +54,22 @@ function HomeBenefitSection() {
                     <div className='flex gap-2 md:hidden'>
                         <div className="md:hidden w-[60%] text-left">
                             <h1 className="text-[12px] sm:text-[24px] font-semibold mb-4">What You’ll Gain</h1>
-                            <ul className="space-y-2 text-gray-800">
+                            <ul className="space-y-2 ">
                                 <li className="flex items-start gap-2">
                                     <span className="text-black text-[14px] sm:text-lg">✔</span>
-                                    <p className='text-[10px] sm:text-[20px]'>Understanding of geriatric mental health care</p>
+                                    <p className='text-[#343434] text-[10px] sm:text-[20px] font-light'>Understanding of geriatric mental health care</p>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-black text-[14px] sm:text-lg">✔</span>
-                                    <p className='text-[10px] sm:text-[20px]'>Practical counseling skills</p>
+                                    <p className='text-[#343434] text-[10px] sm:text-[20px] font-light'>Practical counseling skills</p>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-black text-[14px] sm:text-lg">✔</span>
-                                    <p className='text-[10px] sm:text-[20px]'>Confidence to handle real-life elderly cases</p>
+                                    <p className='text-[#343434] text-[10px] sm:text-[20px] font-light'>Confidence to handle real-life elderly cases</p>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-black text-[14px] sm:text-lg">✔</span>
-                                    <p className='text-[10px] sm:text-[20px]'>Certification upon successful completion</p>
+                                    <p className='text-[#343434] text-[10px] sm:text-[20px] font-light'>Certification upon successful completion</p>
                                 </li>
                             </ul>
                         </div>

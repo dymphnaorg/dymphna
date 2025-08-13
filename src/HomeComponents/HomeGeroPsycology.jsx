@@ -43,6 +43,8 @@ function HomeGeroPsycology() {
                                     <h1>4. Mental Health Concerns</h1>
                                     <h1>5. Physical Health Conditions</h1>
                                     <h1>6. Psychopharmacological Treatment</h1>
+                                    <h1>7. Psychological Assessments</h1>
+                                    <h1>8. Psychological Intervention</h1>
                                 </div>
 
                             </div>
@@ -107,6 +109,8 @@ function HomeGeroPsycology() {
                             <h1>4. Mental Health Concerns</h1>
                             <h1>5. Physical Health Conditions</h1>
                             <h1>6. Psychopharmacological Treatment</h1>
+                            <h1>7. Psychological Assessments</h1>
+                            <h1>8. Psychological Intervention</h1>
                         </div>
                     </div>
 
@@ -126,7 +130,7 @@ function HomeGeroPsycology() {
                     </div>
                 </div>
             </div>
-            
+
 
 
         </div>

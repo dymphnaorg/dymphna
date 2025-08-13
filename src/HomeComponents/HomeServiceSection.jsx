@@ -13,6 +13,7 @@ function HomeServiceSection() {
     const navigate = useNavigate();
     const serviceNavigation = () => {
         navigate('/services');
+        window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
     return (
