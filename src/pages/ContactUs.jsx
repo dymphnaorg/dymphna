@@ -225,7 +225,7 @@ function ContactUs() {
           <img
             src={contactimg2}
             alt=""
-            className="absolute top-[590px] left-[-30px] w-[100px]  z-0"
+            className="absolute top-[675px] left-[-30px] w-[100px]  z-0"
           />
 
           {/* Top Header */}

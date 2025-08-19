@@ -3,6 +3,7 @@ import HomeServiceSectionBg from '../assets/Rectangle18.png'
 import HomeServicesIcon1 from '../assets/Group27.png'
 import HomeServicesIcon2 from '../assets/Group28.png'
 import HomeServicesIcon3 from '../assets/Group29.png'
+import HomeServicesIcon4 from '../assets/Group50.png'
 import '../styles/element.css';
 import { LuArrowUpRight } from "react-icons/lu";
 import { FaCircle } from "react-icons/fa";
@@ -109,6 +110,29 @@ function HomeServiceSection() {
                             <div className='w-full md:w-[60%] max-w-[670px]'>
                                 <h1 className='text-[10px] sm:text-[20px] text-left'>
                                     Remedial training supports students with learning difficulties by identifying gaps and providing personalized instruction to overcome challenges and build confidence.
+                                </h1>
+                            </div>
+                        </div>
+
+                        <hr className="w-full border-t border-[#5B5B5B] " />
+                        <div className='flex flex-col md:flex-row justify-between gap-8 w-full'>
+                            {/* LEFT SECTION: Text + Image */}
+                            <div className='w-full md:w-[40%]'>
+                                <div>
+                                    <h1 className='text-[12px] sm:text-[20px]' style={{ fontWeight: "500" }}>
+                                        Speech & Audio Therapy
+                                    </h1>
+                                    <p className='text-[10px] sm:text-[14px] text-[#AEAEAE]' style={{ fontWeight: "400" }}>
+                                        Enhancing Communication, Building Confidence
+                                    </p>
+                                </div>
+                                <img className='pt-6 md:pt-9 w-[55px] md:w-auto' src={HomeServicesIcon4} alt="" />
+                            </div>
+
+                            {/* RIGHT SECTION: Description Text */}
+                            <div className='w-full md:w-[60%] max-w-[670px]'>
+                                <h1 className='text-[10px] sm:text-[20px] text-left'>
+                                    Therapists provide personalized sessions, language support, hearing care, and early interventions to improve communication and enrich daily life.
                                 </h1>
                             </div>
                         </div>

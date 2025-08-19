@@ -15,8 +15,6 @@ import ConsultantExperts9 from '../assets/Rectangle100.png'
 
 
 function HomeAdministration() {
-
-
     return (
         <div className='my-20 dm-sans px-5 sm:px-10'>
 
@@ -144,7 +142,7 @@ function HomeAdministration() {
                                     <p className="text-[7px] md:text-[14px] font-semibold mt-1">KARTHIKA UNNI. P</p>
                                     <p className="text-[7px] md:text-[12px] font-light">Msc Psychology </p>
                                     <p className="text-[7px] md:text-[12px] font-light"> B.ed in Special education (ID)</p>
-                                    <p className="text-[7px] md:text-[12px] font-light">(RCI),(PhD), Clinical Psychologist</p>
+                                    <p className="text-[7px] md:text-[12px] font-light">Special Educator</p>
                                 </div>
                             </div>
                             <div className="flex flex-col items-start text-left mt-1">

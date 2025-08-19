@@ -21,6 +21,7 @@ function Home() {
 
   const aboutNavigation = () => {
     navigate('/aboutUs');
+     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
 
