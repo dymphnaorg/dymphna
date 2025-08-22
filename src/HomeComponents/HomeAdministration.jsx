@@ -263,7 +263,7 @@ function HomeAdministration() {
                                     <p className="text-[7px] md:text-[14px] font-semibold mt-1">KARTHIKA UNNI. P</p>
                                     <p className="text-[7px] md:text-[12px] font-light">Msc Psychology </p>
                                     <p className="text-[7px] md:text-[12px] font-light"> B.ed in Special education (ID)</p>
-                                    <p className="text-[7px] md:text-[12px] font-light">(RCI),(PhD), Clinical Psychologist</p>
+                                    <p className="text-[7px] md:text-[12px] font-light">Special Educator</p>
                                 </div>
                             </div>
                             <div className="flex flex-col items-start text-left mt-1">
