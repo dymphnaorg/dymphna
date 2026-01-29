@@ -12,6 +12,7 @@ import aboutImg5 from '../assets/group14.png'
 import aboutImg7 from '../assets/about111.png'
 import aboutImg8 from '../assets/abou112.png'
 import aboutImg9 from '../assets/about113.png'
+import Collaborators from '../HomeComponents/Collaborators';
 
 
 
@@ -61,6 +62,7 @@ function AboutUs() {
                 </div>
             </div>
 
+            <Collaborators />
             <div className='sm:pt-20 pt-10' >
                 <h1 className='text-[12px] md:text-[16px] lg:text-[20px]' style={{ fontWeight: "500" }} >Our multifaceted approach included:</h1>
 
