@@ -9,6 +9,7 @@ import HomeBenefitSection from '../HomeComponents/HomeBenefitSection';
 import { useNavigate } from 'react-router-dom';
 import HomStressCalculator from '../HomeComponents/HomStressCalculator';
 import '../styles/element.css'
+import Gallery from '../HomeComponents/Gallery';
 
 
 function Home() {
@@ -21,7 +22,7 @@ function Home() {
 
   const aboutNavigation = () => {
     navigate('/aboutUs');
-     window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
 
@@ -150,6 +151,7 @@ flex justify-center items-center px-1 hover:bg-white duration-300">
       </div>
       <HomeServiceSection />
       <HomeAdministration />
+      <Gallery />
       <HomeGeroPsycology />
       <HomeBenefitSection />
 
