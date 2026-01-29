@@ -60,15 +60,15 @@ function ContactUs() {
     if (!validate()) return;
     setIsSubmitting(true);
     const payload = {
-      first_name: formData.firstName ,
+      first_name: formData.firstName,
       last_name: formData.lastName,
       email: formData.email,
       phone: formData.phone,
-     
+
     };
 
     try {
-      console.log( "payloaddddd", payload);
+      console.log("payloaddddd", payload);
       const result = await sendContactMessageApi(payload);
 
       if (result.status === 200) {
@@ -84,8 +84,8 @@ function ContactUs() {
     } finally {
       setIsSubmitting(false);
     }
-   
-    
+
+
   };
 
   return (
@@ -104,7 +104,7 @@ function ContactUs() {
               <div className='flex-1 flex  justify-center flex-col gap-4  text-[12px] md:text-[16px] lg:text-[16px] ' style={{ fontWeight: "500" }} >
                 <div className='flex flex-col gap-2 flex-center ' >
                   <h1>Address :</h1>
-                  <p>Dymphna – Counselling and Psychotherapy Vadakkenchery, Palakkad</p>
+                  <p>Dymphna – Psychotherapy and Counseling <br />Royal Junction, Gandhinagar, 2nd Street, Karakkad,Vadakkenchery, Palakkad</p>
                 </div>
 
                 <div className='flex flex-col gap-2' >
@@ -322,7 +322,7 @@ function ContactUs() {
             <div className="max-w-[240px] w-full font-medium text-left">
               <div className="flex flex-col gap-2">
                 <h1>Address :</h1>
-                <p>Dymphna – Counselling and Psychotherapy Vadakkenchery, Palakkad</p>
+                <p>Dymphna – Psychotherapy and Counseling <br />Royal Junction, Gandhinagar, 2nd Street, Karakkad,Vadakkenchery, Palakkad</p>
               </div>
 
               <div className="flex flex-col gap-2 mt-4">

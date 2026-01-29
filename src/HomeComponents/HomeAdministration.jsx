@@ -115,7 +115,7 @@ function HomeAdministration() {
                                     className="w-auto h-27 sm:h-27 md:h-60 object-contain mx-2"
                                 />
                                 <div className='pl-2 md:pl-3 ' >
-                                    <p className="text-[7px] md:text-[14px] font-semibold mt-1">RITHIKA PARAMASRWARAN</p>
+                                    <p className="text-[7px] md:text-[14px] font-semibold mt-1">RITHIKA PARAMESWARAN</p>
                                     <p className="text-[7px] md:text-[12px] font-light">M.SC Applied Psychology (Sports)</p>
                                     <p className="text-[7px] md:text-[12px] font-light">Consultant Psychologist</p>
                                 </div>
@@ -236,7 +236,7 @@ function HomeAdministration() {
                                     className="w-auto h-27 sm:h-27 md:h-60 object-contain mx-2"
                                 />
                                 <div className='pl-2 md:pl-3 ' >
-                                    <p className="text-[7px] md:text-[14px] font-semibold mt-1">RITHIKA PARAMASRWARAN</p>
+                                    <p className="text-[7px] md:text-[14px] font-semibold mt-1">RITHIKA PARAMESWARAN</p>
                                     <p className="text-[7px] md:text-[12px] font-light">M.SC Applied Psychology (Sports)</p>
                                     <p className="text-[7px] md:text-[12px] font-light">Consultant Psychologist</p>
                                 </div>
