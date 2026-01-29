@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import img1 from '../assets/galleryImage0.jpeg'
 import img2 from '../assets/galleryImage1.jpeg'
 import img3 from '../assets/galleryImage2.jpeg'
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack, IoIosArrowForward, IoMdClose } from "react-icons/io";
 
 const Gallery = () => {
     const images = [img1, img2, img3];
+    const [selectedImage, setSelectedImage] = useState(null);
     const [activeIndex, setActiveIndex] = useState(1);
 
     const nextSlide = () => {
@@ -45,6 +46,7 @@ const Gallery = () => {
                             zIndex: 20,
                             opacity: 1,
                             transform: 'translateX(0) scale(1.1)',
+                            cursor: 'pointer'
                         };
                     } else if (isLeft) {
                         positionStyle = {
@@ -74,10 +76,14 @@ const Gallery = () => {
                             key={index}
                             src={img}
                             alt={`Gallery ${index}`}
-                            className="absolute w-[60%] sm:w-[45%] h-full object-cover rounded-[30px] shadow-xl transition-all duration-500 ease-in-out left-0 right-0 mx-auto"
+                            className="absolute w-[80%] sm:w-[45%] h-full object-cover rounded-[30px] shadow-xl transition-all duration-500 ease-in-out left-0 right-0 mx-auto"
                             style={positionStyle}
                             onClick={() => {
-                                if (!isCenter) setActiveIndex(index);
+                                if (isCenter) {
+                                    setSelectedImage(img);
+                                } else {
+                                    setActiveIndex(index);
+                                }
                             }}
                         />
                     );
@@ -102,6 +108,28 @@ const Gallery = () => {
                     ></div>
                 ))}
             </div>
+
+            {/* Lightbox Modal */}
+            {selectedImage && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-5" onClick={() => setSelectedImage(null)}>
+                    <div className="relative max-w-5xl w-full max-h-screen flex justify-center">
+                        {/* Close Button - positioned absolute relative to the modal container or fixed top-right */}
+                        <button
+                            onClick={() => setSelectedImage(null)}
+                            className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
+                        >
+                            <IoMdClose size={40} />
+                        </button>
+
+                        <img
+                            src={selectedImage}
+                            alt="Full Screen View"
+                            className="max-w-full max-h-[90vh] object-contain rounded-lg"
+                            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking the image itself
+                        />
+                    </div>
+                </div>
+            )}
 
         </div>
     )

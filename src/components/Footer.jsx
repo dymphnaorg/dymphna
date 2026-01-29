@@ -45,6 +45,7 @@ function Footer() {
                         <li><a className='hover:text-[#80BD48] transition-all' href="/services#Psychodiagnostics">Psychodiagnostics</a></li>
                         <li><a className='hover:text-[#80BD48] transition-all' href="/services#Remedialtraining">Remedial training</a></li>
                         <li><a className='hover:text-[#80BD48] transition-all' href="/services#CareerGuidance">Career Guidance</a></li>
+                        <li><a className='hover:text-[#80BD48] transition-all' href="/services">Speech therapy and Audiologist</a></li>
                       </ul>
 
                     </div>
@@ -130,6 +131,7 @@ function Footer() {
                 <a className='hover:text-[#80BD48] transition-all' href="/services#Psychodiagnostics"><li>Psychodiagnostics</li></a>
                 <a className='hover:text-[#80BD48] transition-all' href="/services#Remedialtraining"><li>Remedial training</li></a>
                 <a className='hover:text-[#80BD48] transition-all' href="/services#CareerGuidance"><li>Career Guidance</li></a>
+                <a className='hover:text-[#80BD48] transition-all' href="/services"><li>Speech therapy and Audiologist</li></a>
               </ul>
 
               <h1 className="text-[#696969] font-semibold text-[14px] mt-4 mb-2">OTHER SERVICE</h1>

@@ -104,7 +104,7 @@ function ContactUs() {
               <div className='flex-1 flex  justify-center flex-col gap-4  text-[12px] md:text-[16px] lg:text-[16px] ' style={{ fontWeight: "500" }} >
                 <div className='flex flex-col gap-2 flex-center ' >
                   <h1>Address :</h1>
-                  <p>Dymphna – Psychotherapy and Counseling <br />Royal Junction, Gandhinagar, 2nd Street, Karakkad,Vadakkenchery, Palakkad</p>
+                  <p>Dymphna – Psychotherapy and Counseling <br />Royal Junction, Gandhinagar, 2nd Street, Karayankad,Vadakkenchery, Palakkad</p>
                 </div>
 
                 <div className='flex flex-col gap-2' >
@@ -322,7 +322,7 @@ function ContactUs() {
             <div className="max-w-[240px] w-full font-medium text-left">
               <div className="flex flex-col gap-2">
                 <h1>Address :</h1>
-                <p>Dymphna – Psychotherapy and Counseling <br />Royal Junction, Gandhinagar, 2nd Street, Karakkad,Vadakkenchery, Palakkad</p>
+                <p>Dymphna – Psychotherapy and Counseling <br />Royal Junction, Gandhinagar, 2nd Street, Karayankad,Vadakkenchery, Palakkad</p>
               </div>
 
               <div className="flex flex-col gap-2 mt-4">
