@@ -6,9 +6,9 @@ import aboutImg from '../assets/Rectangle19(1).png'
 import aboutImg2 from '../assets/Rectangle19(2).png'
 import { FaCircle } from "react-icons/fa";
 
-import aboutImg3 from '../assets/group3.png'
-import aboutImg4 from '../assets/group4.png'
-import aboutImg5 from '../assets/group14.png'
+import aboutImg3 from '../assets/Group3.png'
+import aboutImg4 from '../assets/Group4.png'
+import aboutImg5 from '../assets/Group14.png'
 import aboutImg7 from '../assets/about111.png'
 import aboutImg8 from '../assets/abou112.png'
 import aboutImg9 from '../assets/about113.png'
