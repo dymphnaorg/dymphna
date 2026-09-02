@@ -4,7 +4,6 @@ import { FaRegEnvelope, FaCircle } from "react-icons/fa";
 import { LuArrowUpRight } from "react-icons/lu";
 import contactimg from "../assets/Rectangle19(3).png"
 import contactimg2 from "../assets/Rectangle19(2).png"
-import { sendContactMessageApi } from '../services/allApi';
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -59,33 +58,20 @@ function ContactUs() {
     e.preventDefault();
     if (!validate()) return;
     setIsSubmitting(true);
-    const payload = {
-      first_name: formData.firstName,
-      last_name: formData.lastName,
-      email: formData.email,
-      phone: formData.phone,
 
-    };
+    const message = `*New Contact Request*
+Name: ${formData.firstName} ${formData.lastName}
+Email: ${formData.email}
+Phone: ${formData.phone}`;
 
-    try {
-      console.log("payloaddddd", payload);
-      const result = await sendContactMessageApi(payload);
+    const whatsappUrl = `https://wa.me/918943340620?text=${encodeURIComponent(message)}`;
+    
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, '_blank');
 
-      if (result.status === 200) {
-        alert("Thanks for reaching out! We'll get back to you soon.");
-        setFormData({ firstName: "", lastName: "", email: "", phone: "" });
-        setErrors({});
-      } else {
-        alert("Message sending failed. Please try again.");
-      }
-    } catch (error) {
-      console.error(error);
-      alert("Something went wrong. Please try again later.");
-    } finally {
-      setIsSubmitting(false);
-    }
-
-
+    setFormData({ firstName: "", lastName: "", email: "", phone: "" });
+    setErrors({});
+    setIsSubmitting(false);
   };
 
   return (
